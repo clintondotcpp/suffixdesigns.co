@@ -11,6 +11,7 @@
     <title>Suffix Designs: Illustrations, Logos, GIFs and Fliers</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
     <script src="./script.js" defer></script>
+    <!-- CSS only -->
     <script src="https://kit.fontawesome.com/9c58ab43d1.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -29,17 +30,18 @@
             <span id="bar" class="fas fa-outdent"></span>
         </div>
     </nav>
-
+        <!--<p>Illustrations, GIFs, Logos and Fliers</p>
+        <p><span>We make stunning designs </span> for businesses and professionals</p>-->
     <div class="gradient"></div>
     <section id="intro">
-        <p>Illustrations, GIFs, Logos and Fliers</p>
-        <p><span>We make stunning designs </span> for businesses and professionals</p>
+        <a href="./calendly.php"> Schedule a call <span class="fa fa-phone" aria-hidden="true"></span></a>
     </section>
+    
     <div class="section-white">
     <section id="categories">
             <a href="illustrations.php">
              <div id="illustrations" class="container">
-                <img src="./Assets/Illustrations/Template 1.png" alt="Template 1">
+                <img src="img/Template 001.png" alt="Template 1">
                 <div class="text">
                 <h2>Illustrations</h2>
                 <p>$150</p>
@@ -72,7 +74,7 @@
 
         <a href="fliers.php">
         <div id="fliers" class="container">
-                <img src="./Assets/Fliers/Template 1.jpg" alt="Fliers">
+                <img src="./Assets/Fliers/Template 001.jpg" alt="Fliers">
                 <div class="text">
                 <h2>Fliers</h2>
                 <p>$100</p>
@@ -83,8 +85,8 @@
         <a href="logogif.php">
         <div id="logo-gifs" class="container">
             <video autoplay loop muted>
-                <source src="./Assets/LogoGIF/Template 001.mp4" type="video/mp4">
-                <source src="./Assets/LogoGIF/Template 001.ogg" type="video/ogg">
+                <source src="LOGOGIF/Template 001.mp4" type="video/mp4">
+                <source src="LOGOGIF/Template 001.ogg" type="video/ogg">
             </video>
             <div class="text">
               <h2>Logo GIF</h2>
@@ -96,8 +98,8 @@
         <a href="photogif.php">
             <div id="photo-gifs" class="container">
                 <video autoplay loop muted>
-                    <source src="./Assets/LogoGIF/Template 001.mp4" type="video/mp4">
-                    <source src="./Assets/LogoGIF/Template 001.ogg" type="video/mp4">
+                    <source src="PHOTOGIF/Template 001.mp4" type="video/mp4">
+                    <source src="PHOTOGIF/Template 001.ogg" type="video/mp4">
                 </video>
             <div class="text">
                 <h2>Photo GIF</h2>
@@ -128,8 +130,10 @@
         <img src="./Assets/Reviews/client6.jpg">
         </div>
     </section>
+   </div>
     <div class="gradient"></div>
-    <form action="/signup" method="POST">
+
+<form action="/signup" method="POST">
     <section id="newsletter">
         <div class="newstext">
             <h4>Sign Up for our Newsletter and get a <span>FREE</span> Logo GIF</h4>
@@ -142,9 +146,7 @@
             <button>Sign Up</button>
         </div>
     </section>
-
 </form>
-    </div>
     <div class="gradient"></div>
     <div class="section-black">
     <footer>
