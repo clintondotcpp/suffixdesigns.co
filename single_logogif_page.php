@@ -17,11 +17,11 @@
     }
 /*`product_id`, `product_name`, `product_img`, `product_price`, `product_description`, */
     try{
-        $conn = new mysqli('localhost', 'Kurinton', '@@90210@@', 'logogif');
+        $conn = new mysqli('localhost', 'Kurinton', '@@90210@@', 'logogifs');
         if($conn->connect_error){
             $error = $conn->connect_error;
         }
-     $sql = 'SELECT  `product_id`, `product_name`, `product_img`, `product_price`, `product_description`, `stripe_id` FROM products WHERE `product_id` = '.$id.' LIMIT 1'; //TODO
+     $sql = 'SELECT  `product_id`, `stripe_id`, `product_name`, `product_video`, `product_price`, `product_description`, `stripe_id` FROM products WHERE `product_id` = '.$id.' LIMIT 1'; //TODO
         $result = $conn->query($sql);
         
     } catch(Exception $e){
@@ -69,8 +69,8 @@
         </div>
     </nav>
     <div class="gradient"></div>
-    <form method="post" action="orderupload.php" enctype="multipart/form-data">
-    <section id="single-product">
+    <form method="post" action="orderupload.php?product=<?php echo $product['product_name']?>" enctype="multipart/form-data">
+    <section id="single-gif">
         <?php
             $email = $confirm_email = $headshot = $logo = "";
             $emailErr = $confirm_emailErr = $headshotErr = $logoErr ="";
@@ -150,10 +150,7 @@
          </div>
          <div class="customer-assets">
              <p>Upload your headshots</p>
-            <div class="headshot">
-                <input type="file" value="Upload your headshot/picture" name="headshot">
-                <span class="error">*<?php echo $headshotErr?></span>
-            </div>
+            
             <p>Upload your logos</p>
             <div class="logo">
                 <input type="file" placeholder="Upload your logo" name="logo" >

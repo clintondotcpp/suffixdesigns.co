@@ -7,6 +7,8 @@ define('TB', 1099511627776);
 
     $email = $confirm_email = $instructions = "";
 
+    $product = $_GET['product'];
+
     return $first_name['first_name'] ?? null; 
     return $first_name['last_name'] ?? null; 
     return $first_name['stripeToken'] ?? null; 
@@ -96,7 +98,7 @@ define('TB', 1099511627776);
         exit();
     }
 
-    $sql = "INSERT INTO order_list(email, confirm_email, headshot, logo, instructions) VALUES('$email', '$confirm_email', '$filename', '$filename2', '$instructions')";
+    $sql = "INSERT INTO order_list(product, email, confirm_email, headshot, logo, instructions) VALUES('$email', '$confirm_email', '$filename', '$filename2', '$instructions', '$product')";
     //mysqli_query($conn,$sql);
     $conn->query($sql);
 }

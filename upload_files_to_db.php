@@ -10,8 +10,8 @@ $database = "logogifs";    /*change */
 $product_price = $product_description = "";
 
 $mysqli = new mysqli($host, $user, $pass, $database) or die(mysqli_error(mysqli));
-//$local_dir = 'C:\xampp\htdocs\mywebsite\Assets\Logos';
-//$local_server_dir = 'LOGO';
+//$local_dir = 'C:\xampp\htdocs\mywebsite\Assets\LogoGIF';
+//$local_server_dir = 'LOGOGIF';
 $local_http_dir = local_server_path_to_http($local_server_dir);
 
 copy_files($local_dir, $local_server_dir);
@@ -26,8 +26,7 @@ for($i = 0; $i < count($files); $i++){
     $product_price = "50";                                                             /*change */
     $product_description = "✔Completely customizable.
                             ✔Satisfaction guaranteed- unlimited revisions
-                            ✔5 varitations of the same logo.
-                            ✔Turnaround- 10-14 days.
+                            ✔Turnaround- 3-4 days. 
     ";
     $query = "INSERT IGNORE INTO products (product_name,product_video,product_price,product_description) VALUES ('$word', '$http_path', '$product_price','$product_description')";
     $mysqli->query($query) or die($mysqli->error);
