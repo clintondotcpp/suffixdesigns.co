@@ -21,7 +21,7 @@
         if($conn->connect_error){
             $error = $conn->connect_error;
         }
-     $sql = 'SELECT  `product_id`, `product_name`, `product_img`, `product_price`, `product_description`, `stripe_id` FROM products WHERE `product_id` = '.$id.' LIMIT 1'; //TODO
+     $sql = 'SELECT  `product_id`, `product_name`, `product_video`, `product_price`, `product_description`, `stripe_id` FROM products WHERE `product_id` = '.$id.' LIMIT 1'; //TODO
         $result = $conn->query($sql);
         
     } catch(Exception $e){
@@ -49,6 +49,8 @@
     <title>Cartoon GIFs: Template <?php echo $id?></title>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <script src="https://kit.fontawesome.com/9c58ab43d1.js" crossorigin="anonymous"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
+    <script src="https://js.stripe.com/v3/"></script>
 </head>
 <body>
     <nav>
@@ -60,8 +62,7 @@
             <li><a href="logogif.php">Logo GIFs</a></li>
             <li><a href="Logos.php">Logos</a></li>
             <li><a href="fliers.php">Fliers</a></li>
-            <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
-            <script src="https://js.stripe.com/v3/"></script>
+            
             <a href="#" id="close"><span class="fa fa-times"></span></a>
         </ul>
         <div id="mobile">
@@ -70,7 +71,7 @@
     </nav>
     <div class="gradient"></div>
     <form method="post" action="orderupload.php" enctype="multipart/form-data">
-    <section id="single-product">
+    <section id="single-gif">
         <?php
             $email = $confirm_email = $headshot = $logo = "";
             $emailErr = $confirm_emailErr = $headshotErr = $logoErr ="";

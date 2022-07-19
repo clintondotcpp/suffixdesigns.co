@@ -4,14 +4,14 @@ require_once 'functions.php';
 $host = "localhost";
 $user = "Kurinton";
 $pass = "@@90210@@";
-$database = "gifs";    /*change */
+$database = "logogifs";    /*change */
 
 //input variables
 $product_price = $product_description = "";
 
 $mysqli = new mysqli($host, $user, $pass, $database) or die(mysqli_error(mysqli));
-//$local_dir = 'C:\xampp\htdocs\mywebsite\Assets\PhotoGIF';
-//$local_server_dir = 'PHOTOGIF';
+//$local_dir = 'C:\xampp\htdocs\mywebsite\Assets\Logos';
+//$local_server_dir = 'LOGO';
 $local_http_dir = local_server_path_to_http($local_server_dir);
 
 copy_files($local_dir, $local_server_dir);
@@ -23,12 +23,11 @@ for($i = 0; $i < count($files); $i++){
     $word = remove_ext($files[$i]);
     $http_path = "$local_http_dir/$files[$i]";
     $http_path = preg_replace("! !","%20",$http_path);
-    $product_price = "150";                                                             /*change */
+    $product_price = "50";                                                             /*change */
     $product_description = "✔Completely customizable.
-                            ✔Satisfaction guaranteed- unlimited revisions.
-                            ✔Trasparent background for posts and stories.
-                            ✔Turnaround- 3 days.
-    
+                            ✔Satisfaction guaranteed- unlimited revisions
+                            ✔5 varitations of the same logo.
+                            ✔Turnaround- 10-14 days.
     ";
     $query = "INSERT IGNORE INTO products (product_name,product_video,product_price,product_description) VALUES ('$word', '$http_path', '$product_price','$product_description')";
     $mysqli->query($query) or die($mysqli->error);
