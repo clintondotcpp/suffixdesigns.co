@@ -1,0 +1,7 @@
+Price ID,Product ID,Product Name,Product Statement Descriptor,Product Tax Code,Description,Created (UTC),Amount,Currency,Interval,Interval Count,Usage Type,Aggregate Usage,Billing Scheme,Trial Period Days,Tax Behavior
+price_1LMwXbGvSc684Tudi8YDGjHw,prod_M56luKblOxRRgb,Illustrations- Template 6,,txcd_20030000,,2022-07-18 16:11,15000,usd,,,,,per_unit,,inclusive
+price_1LMwWoGvSc684TudLHMw5bFT,prod_M56k0zomg3Ou74,Illustrations- Template 5,,txcd_20030000,,2022-07-18 16:10,15000,usd,,,,,per_unit,,inclusive
+price_1LMwVuGvSc684TudMiCiUnPY,prod_M56jZQ9kfGShhq,Illustrations- Template 4,,txcd_20030000,,2022-07-18 16:09,15000,usd,,,,,per_unit,,inclusive
+price_1LMwVPGvSc684TudUlFDwJ9K,prod_M56iBb7u9A9Fr9,Illustrations- Template 3,,txcd_20030000,,2022-07-18 16:09,15000,usd,,,,,per_unit,,inclusive
+price_1LMwUJGvSc684TudfGwoZdjj,prod_M56hgu8MguNCQo,Illustrations- Template 2,,txcd_20030000,,2022-07-18 16:08,15000,usd,,,,,per_unit,,inclusive
+price_1LMwTKGvSc684TudygTZetyq,prod_M56gm1Qg6vX42g,Illustrations- Template 1,,txcd_20030000,,2022-07-18 16:07,15000,usd,,,,,per_unit,,inclusive

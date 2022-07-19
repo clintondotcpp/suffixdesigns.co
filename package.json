@@ -1,0 +1,31 @@
+{
+  "name": "mailchimp_newsletter",
+  "version": "1.0.0",
+  "description": "mailchimp newsletter for mywebsite",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "node app",
+    "dev": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roosevelt1997/mywebsite-suffix.git"
+  },
+  "author": "Clinton Chukwunyere",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/roosevelt1997/mywebsite-suffix/issues"
+  },
+  "homepage": "https://github.com/roosevelt1997/mywebsite-suffix#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
