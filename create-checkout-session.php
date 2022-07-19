@@ -1,18 +1,11 @@
 <?php
-
+  $priceID = $_GET['product'];
 require 'vendor/autoload.php';
-// This is your test secret API key.
-\Stripe\Stripe::setApiKey('sk_test_51LMBLYGvSc684Tudw7W3TJhoOwXeXuf3l4zHk8OeAbvJU3PI80xp5ENPpTXm4rsZ7Szidxbd773gqnNcLUtNaaIS00YjFJGxUm');
+// This is your live secret API key.
+\Stripe\Stripe::setApiKey('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');
 
 header('Content-Type: application/json');
-/* {{PRICE_ID}}*/
-
-
-    $priceID = $_GET['product'];
     
-
-    
-            
 
 $YOUR_DOMAIN = 'http://localhost/mywebsite/';
 
