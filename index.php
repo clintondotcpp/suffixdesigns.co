@@ -27,7 +27,7 @@
             <a href="#" id="close"><span class="fa fa-times"></span></a>
         </ul>
         <div id="mobile">
-            <span id="bar" class="fas fa-outdent"></span>
+        <span id= "bar" class="fa fa-bars" style="font-size:36px"></span>
         </div>
     </nav>
         <!--<p>Illustrations, GIFs, Logos and Fliers</p>
@@ -41,7 +41,7 @@
     <section id="categories">
             <a href="illustrations.php">
              <div id="illustrations" class="container">
-                <img src="img/Template 001.png" alt="Template 1">
+                <img src="img/Template 004.jpg" alt="Template 1">
                 <div class="text">
                 <h2>Illustrations</h2>
                 <p>$150</p>
@@ -138,7 +138,6 @@
         <div class="newstext">
             <h4>Sign Up for our Newsletter and get a <span>FREE</span> Logo GIF</h4>
             <p>Get E-mail updates on our lastest products and <span>special offers.</span></p>
-            
         </div>
 
         <div class="form">
