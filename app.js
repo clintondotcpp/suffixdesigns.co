@@ -2,7 +2,6 @@ const express = require('express'); //include the express framework
 const request = require('request');
 const bodyParser = require('body-parser');
 const path = require('path'); //to deal with file paths
-const { dirname } = require('path');
 
 
 //initialize our express app
@@ -31,6 +30,12 @@ app.post('/signup',(req,res)=>{
             {
                 email_address: email,
                 status: 'subscribed',
+                merge_fields: {
+                    FNAME: '',
+                    LNAME: ''
+                }
+
+                
             }
         ]
     };
