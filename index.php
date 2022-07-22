@@ -11,8 +11,26 @@
     <title>Suffix Designs: Illustrations, Logos, GIFs and Fliers</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
     <script src="./script.js" defer></script>
-    <!-- CSS only -->
     <script src="https://kit.fontawesome.com/9c58ab43d1.js" crossorigin="anonymous"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '398201842366874');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=398201842366874&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
     <nav>
@@ -34,6 +52,13 @@
         <p><span>We make stunning designs </span> for businesses and professionals</p>-->
     <div class="gradient"></div>
     <section id="intro">
+        
+    </section>
+
+    <section id= "suffix-info">
+        <h3>About Suffix Designs</h3>
+        <p>We are a team of digital artists and animators. We create illustrations, animations, logos, fliers, etc for individuals, professionals and businesses.
+        </p>
         <a href="./calendly.php"> Schedule a call <span class="fa fa-phone" aria-hidden="true"></span></a>
     </section>
     
@@ -191,14 +216,14 @@
             </div>
         </div>
         <div class="copyright">
-        <p>© 2021-2022, Suffix Designs</p>
+            <p>© 2021-2022, Suffix Designs</p>
         </div>
-        <div id="schedule-a-call">
-        <a href="calendly.php">
-            <p><small>Speak with us.</small></p>
-            <span class="fa fa-phone" aria-hidden="true"></span>
-        </a>
-       </div>
+        <!--<div id="schedule-a-call">
+            <a href="calendly.php">
+                <p><small>Speak with us.</small></p>
+                <span class="fa fa-phone" aria-hidden="true"></span>
+            </a>
+       </div>-->
     </footer>
     </div>
 </body>

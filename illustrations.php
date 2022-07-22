@@ -66,6 +66,25 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <script src="./script.js" defer></script>
     <script src="https://kit.fontawesome.com/9c58ab43d1.js" crossorigin="anonymous"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '398201842366874');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=398201842366874&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
     
@@ -81,7 +100,7 @@
             <a href="#" id="close"><span class="fa fa-times"></span></a>
         </ul>
         <div id="mobile">
-            <span id="bar" class="fas fa-outdent"></span>
+        <span id="bar" class="fa fa-bars" style="font-size:36px"></span>
         </div>
     </nav>
     <div class="gradient"></div>
@@ -118,6 +137,13 @@
             <li><a href="?pageno=<?php echo $total_pages; ?>">Last</a></li>
         </ul>
     </section>
+
+    <section id= "suffix-info">
+        <h3>For custom orders or requests</h3>
+        <p>Kindly email or schedule a call</p>
+        <a href="./calendly.php"> Schedule a call <span class="fa fa-phone" aria-hidden="true"></span></a>
+        <a href="mailto:info@suffixdesigns.co">Email Us</a>
+    </section>
     <div class="gradient"></div>
     <form action="/signup" method="post">
     <section id="newsletter">
@@ -140,7 +166,7 @@
                 <li><a href="index.html"><img src="./Assets/suffixLogo.PNG" alt="suffixlogo"></a></li>
                 <li><p><strong>Phone:</strong> +(234) 7068734344</p></li>
                 <li><p><strong>Email:</strong> info@suffixdesigns.co</p></li>
-                <li><p><strong>Address:</strong> Lagos, Nigeria</p></li>
+                <li><p><strong>Address:</strong> 10 East Gardens, Colliers Wood, London.</p></li>
             </ul>
     
             <div class="follow">

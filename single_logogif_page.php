@@ -49,6 +49,26 @@
     <title>Logo GIFs: Template <?php echo $id?></title>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <script src="https://kit.fontawesome.com/9c58ab43d1.js" crossorigin="anonymous"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="./script.js" defer></script>
+    <!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '398201842366874');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=398201842366874&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
     <nav>
@@ -60,12 +80,11 @@
             <li><a href="logogif.php">Logo GIFs</a></li>
             <li><a href="Logos.php">Logos</a></li>
             <li><a href="fliers.php">Fliers</a></li>
-            <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
-            <script src="https://js.stripe.com/v3/"></script>
+            
             <a href="#" id="close"><span class="fa fa-times"></span></a>
         </ul>
         <div id="mobile">
-            <span id="bar" class="fas fa-outdent"></span>
+        <span id= "bar" class="fa fa-bars" style="font-size:36px"></span>
         </div>
     </nav>
     <div class="gradient"></div>
@@ -126,15 +145,15 @@
 ?>
 
          <div class="product-image" id="<?php $product_id;?>">
+         <h4><?php echo $product['product_name']; ?></h4>
+            <h2>USD <?php echo $product['product_price']; ?></h2>
+         
                 <video autoplay loop muted>
                     <source src="<?php echo $product['product_video'];?>" type="video/mp4">
                 </video>
-            <p><?php echo $product['product_description'];?></p>
+            <p class="description"><?php echo $product['product_description'];?></p>
          </div>
          <div class="product-main">
-            <h4><?php echo $product['product_name']; ?></h4>
-            <h2>USD <?php echo $product['product_price']; ?></h2>
-         
          <div class="client-email">
             <div id="enter-email" class="email-box">
                 <label for="1st-email"><span class="fa fa-envelope" aria-hidden="true" name="1st-email"></span></label>
@@ -150,7 +169,7 @@
          </div>
          <div class="customer-assets">
              <p>Upload your headshots</p>
-            
+             <input type="file" placeholder="Upload your headshot" name="headshot" >
             <p>Upload your logos</p>
             <div class="logo">
                 <input type="file" placeholder="Upload your logo" name="logo" >
@@ -160,7 +179,7 @@
         </div>
 
          <div class="message">
-            <label for="instructions">Tell us how you want your design customized e.g I want a lovely house in the background.</label>
+            <p>Tell us how you want your design customized e.g I want a lovely house in the background.</p>
             <textarea name="instructions" id="instructions" cols="60" rows="10"></textarea>
          </div>
             </form>
