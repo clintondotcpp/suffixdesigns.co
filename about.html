@@ -2,6 +2,18 @@
 <html lang="en">
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J053QB4K19"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-J053QB4K19');
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,7 +53,7 @@
 
 <body>
     <nav>
-        <span id="suffixlogo"><a href="./index.html"><img src="./Assets/suffixLogo.PNG"></a></span>
+        <span id="suffixlogo"><a href="./index.php"><img src="./Assets/suffixLogo.PNG"></a></span>
         <ul id="navbar">
             <li><a href="illustrations.php">Illustrations</a></li>
             <li><a href="gifs.php">Cartoon GIFs</a></li>
@@ -59,7 +71,7 @@
 
     <section id="about">
 
-        <h2>About Us</h2>
+        <h2>About us</h2>
         <article>
             <p>We are a digital design studio operating between the UK and Nigeria.</p>
             <p>We design custom Caricatures, Logos, GIFs for professionals and businesses. We have worked with over
@@ -67,21 +79,28 @@
                 We take pride in the quality of our work, customer service and satisfaction. Our customers' satisfaction
                 is very important to us evident in our service delivery.
             </p>
-            <h2>MEET THE TEAM</h2>
+        </article>
+
+        <h2>MEET THE TEAM</h2>
+        <div id="team">
             <div class="team-box">
                 <img src="./Assets/team/kanyinsola.jpg">
                 <h4>Sales Head</h4>
                 <p>Kanyinsola Adeleye</p>
+                <p><strong>Contat:</strong></p>
                 <p><small>kanyinsola@suffixdesigns.co</small></p>
                 <p><small>+(234) 902 814 0847</small></p>
             </div>
 
-        </article>
-        <div class="section-varwhite"></div>
-
+            <div class="team-box">
+                <img src="./Assets/team/Debbie.jpg">
+                <h4>Head Artist</h4>
+                <p>Deborah Agada</p>
+            </div>
+        </div>
     </section>
 
-    <form action="/signup" method="post">
+    <form action="./newsletter.php" method="post">
         <section id="newsletter">
             <div class="newstext">
                 <h4>Sign Up for our Newsletter and get a <span>FREE</span> Logo GIF</h4>
@@ -99,7 +118,7 @@
         <footer>
             <div class="column">
                 <ul>
-                    <li><a href="index.html"><img src="./Assets/suffixLogo.PNG" alt="suffixlogo"></a></li>
+                    <li><a href="index.php"><img src="./Assets/suffixLogo.PNG" alt="suffixlogo"></a></li>
                     <li>
                         <p><strong>Phone:</strong> +(234) 7068734344</p>
                     </li>
@@ -107,7 +126,7 @@
                         <p><strong>Email:</strong> info@suffixdesigns.co</p>
                     </li>
                     <li>
-                        <p><strong>Address:</strong> Lagos, Nigeria</p>
+                        <p><strong>Address:</strong> 10 East Gardens, Colliers Wood, London.</p>
                     </li>
                 </ul>
 

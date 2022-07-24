@@ -33,6 +33,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J053QB4K19"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-J053QB4K19');
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -81,7 +90,7 @@
     <section id="products">
     <h2 class="category-title">Photo GIFs</h2>
     <?php foreach($products as $product){ ?>
-        <a href="single_photogif_page.php?product=<?php echo $product['product_id'];?>">
+        <a href="photogifdetail.php?product=<?php echo $product['product_id'];?>">
             <div id="<?php $product['product_id']?>" class="container">
                 <video  autoplay loop muted>
                     <source src="<?php echo $product['product_video'];?>" type="video/mp4">
@@ -100,7 +109,7 @@
 
     
     <div class="gradient"></div>
-    <form action="/signup" method="post">
+    <form action="/newsletter.php" method="post">
     <section id="newsletter">
         <div class="newstext">
             <h4>Sign Up for our Newsletter and get a <span>FREE</span> Logo GIF</h4>
@@ -118,10 +127,10 @@
         <footer>
             <div class="column">
             <ul>
-                <li><a href="index.html"><img src="./Assets/suffixLogo.PNG" alt="suffixlogo"></a></li>
+                <li><a href="index.php"><img src="./Assets/suffixLogo.PNG" alt="suffixlogo"></a></li>
                 <li><p><strong>Phone:</strong> +(234) 7068734344</p></li>
                 <li><p><strong>Email:</strong> info@suffixdesigns.co</p></li>
-                <li><p><strong>Address:</strong> Lagos, Nigeria</p></li>
+                <p><strong>Address:</strong> 10 East Gardens, Colliers Wood, London, United Kingdom.</p>
             </ul>
     
             <div class="follow">

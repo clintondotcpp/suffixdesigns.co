@@ -1,34 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.error{color: #FF0000; font-size: 10px;}    
+</style>
+</head>
+<body>
+
 <?php
-    //connect to database
-    $conn = mysqli_connect('localhost', 'Kurinton', '@@90210@@', 'logogifs');
+    require_once('lib/pdo_db.php');
+
     
-    //check connection
-    if(!$conn){
-        echo 'Connection error: ' . mysqli_connect_error();
+    $id = $_GET['product'];
+    if(filter_var($id, FILTER_VALIDATE_INT) === false){
+        die("No valid ID");
+    }
+/*`product_id`, `product_name`, `product_img`, `product_price`, `product_description`, */
+    try{
+        $conn = new mysqli('localhost', 'Kurinton', '@@90210@@', 'illustrations');
+        if($conn->connect_error){
+            $error = $conn->connect_error;
+        }
+     $sql = 'SELECT  `product_id`, `product_name`, `product_img`, `product_price`, `product_description`, `stripe_id` FROM products WHERE `product_id` = '.$id.' LIMIT 1'; //TODO
+        $result = $conn->query($sql);
+        
+    } catch(Exception $e){
+        $error = $e->getMessage();
     }
 
-    //write querry from all products
-    $sql = 'SELECT `product_id`, `product_video`, `product_name`, `product_price` FROM products';
-
-    //make query and get result
-    $result = mysqli_query($conn,$sql);
-
-    //fetch the resulting rows as an array
-    $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
-    
-
-    //print_r($products);
-
-    //free result from memory
-    mysqli_free_result($result);
-
-    //close the connection
-    mysqli_close($conn);
-
-
-
-
+    $rows = $result->num_rows;
+    if(!$rows){
+        echo "No Results Found";
+    }else{
+        while($product = $result->fetch_assoc()){
+            
+   
+           
+        
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -45,12 +55,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logo GIFs</title>
+    <title>Illustrations: Template <?php echo $id?></title>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <script src="./script.js" defer></script>
     <script src="https://kit.fontawesome.com/9c58ab43d1.js" crossorigin="anonymous"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
     <script src="https://js.stripe.com/v3/"></script>
+    <script src="./script.js" defer></script>
     <!-- Meta Pixel Code -->
 <script>
   !function(f,b,e,v,n,t,s)
@@ -70,7 +80,6 @@
 <!-- End Meta Pixel Code -->
 </head>
 <body>
-    
     <nav>
         <span id="suffixlogo"><a href="./index.php"><img src="./Assets/suffixLogo.PNG"></a></span>
         <ul id="navbar">
@@ -83,31 +92,118 @@
             <a href="#" id="close"><span class="fa fa-times"></span></a>
         </ul>
         <div id="mobile">
-        <span id="bar" class="fa fa-bars" style="font-size:36px"></span>
+        <span id= "bar" class="fa fa-bars" style="font-size:36px"></span>
         </div>
     </nav>
     <div class="gradient"></div>
-    <section id="products">
-    <h2 class="category-title">Logo GIFs</h2>
-    <?php foreach($products as $product){ ?>
-        <a href="logogifdetail.php?product=<?php echo $product['product_id'];?>">
-            <div id="<?php $product['product_id']?>" class="container">
-                <video  autoplay loop muted>
-                    <source src="<?php echo $product['product_video'];?>" type="video/mp4">
-                </video>
-                <div class="text">
-                  <p class="name"><?php echo htmlspecialchars($product['product_name']);?></p>
-                  <p class="price">USD <?php echo htmlspecialchars($product['product_price']);?></p>
-                </div>
-            </div>
-        </a>
-    <?php }?>
-    
-    
-    </section>
+    <form method="post" action="orderupload.php?product=<?php echo $product['product_name'];?>" enctype="multipart/form-data">
+    <section id="single-product">
+        <?php
+            $email = $confirm_email = $headshot = $logo = "";
+            $emailErr = $confirm_emailErr = $headshotErr = $logoErr ="";
 
-   
+            
+            if($_SERVER["REQUEST_METHOD"] == "POST"){
+                $instructions = test_input($_POST["instructions"]);
+            
+
+                function test_input($data){
+                    $data = trim($data);
+                    $data = stripslashes($data);
+                    $data = htmlspecialchars($data);
+                    return $data;
+                }
+
+                if(empty($_POST['email'])){
+                $emailErr = "Enter a valid Address";
+                }
+                else{
+                    $email = test_input($_POST["email"]);
+                    if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+                        $emailErr = "The email address is incorrect";
+                    }
+                }
+
+                if(empty($_POST['confirm_email'])){
+                    $confirm_emailErr = "Enter a valid Address";
+                 }
+                else{
+                    $email = test_input($_POST["confirm_email"]);
+                    if(!filter_var($confirm_email, FILTER_VALIDATE_EMAIL)){
+                        $confirm_emailErr = "The email address is incorrect";
+                    }
+                }
+
+                if(empty($_POST['headshot'])){
+                    $headshotErr = "Please upload a headshot";
+                }
+                else{
+                    $headshot = test_input($_POST['headshot']);
+                }
+
+                if(empty($_POST['logo'])){
+                    $logoErr = "Please upload a logo";
+                }
+                else{
+                    $logoErr = test_input($_POST['logo']);
+                }
+
+             }
+        
+?>
+
+         <div class="product-image" id="<?php $product_id;?>">
+            <h4><?php echo $product['product_name']; ?></h4>
+            <h2>USD <?php echo $product['product_price']; ?></h2>
+         
+            <img src="<?php echo $product['product_img'];?>" alt="product-image">
+            <p><?php echo $product['product_description'];?></p>
+         </div>
+         <div class="product-main">
+            
+         <div class="client-email">
+            <div id="enter-email" class="email-box">
+                <label for="1st-email"><span class="fa fa-envelope" aria-hidden="true" name="1st-email"></span></label>
+                <input type="email"  placeholder="Your Email" name="email">
+                <span class="error"><?php echo $emailErr?></span>
+           </div>
+           <div id="confirm-email" class="email-box">
+            <span class="fa fa-envelope" aria-hidden="true"></span>
+                <input type="email" class="confirm-email" placeholder="Confirm Email" name="confirm_email">
+                <span class="error"><?php echo $confirm_emailErr?></span>
+           </div> 
+           
+         </div>
+         <div class="customer-assets">
+             <p>Upload your headshots</p>
+            <div class="headshot">
+                <input type="file" value="Upload your headshot/picture" name="headshot">
+                <span class="error">*<?php echo $headshotErr?></span>
+            </div>
+            <p>Upload your logos</p>
+            <div class="logo">
+                <input type="file" placeholder="Upload your logo" name="logo" >
+                <span class="error"><?php echo $logoErr?></span>
+            </div>
+            
+        </div>
+
+         <div class="message">
+            <p>Tell us how you want your design customized e.g I want a lovely house in the background.</p>
+            <textarea name="instructions" id="instructions" cols="60" rows="10"></textarea>
+         </div>
+            </form>
+            <form action="./create-checkout-session.php?product=<?php echo $product['stripe_id'];?>" method="POST">
+           <button type="submit" id="checkout-button">Checkout</button>
+           </form>
+        </div>
+        
+         
+    </section>
+    
+    
     <div class="gradient"></div>
+
     <form action="/newsletter.php" method="post">
     <section id="newsletter">
         <div class="newstext">
@@ -133,7 +229,6 @@
             </ul>
     
             <div class="follow">
-            <p>Follow us</p>
             <ul>
             <li><a href="https://www.facebook.com/suffixdesigns"><span class="fa fa-facebook" aria-hidden="true"></span><span class="sr-only">Facabook</span></a></li>
             <li><a href="https://www.instagram.com/suffix_designs"><span class="fa fa-instagram" aria-hidden="true"></span><span class="sr-only">Instagram</span></a></li>
@@ -142,6 +237,7 @@
             <li><a href="mailto:info@suffixdesigns.co"><span class="fa fa-envelope" aria-hidden="true"></span><span class="sr-only">E-mail</span></a></li>
             </ul>
             </div>
+    
             </div>
     
             <div class="column">
@@ -178,6 +274,13 @@
        </div>
         </footer>
         </div>
-    
 </body>
 </html>
+
+<?php
+
+    }//if
+}//while
+    $conn->close();
+?>
+

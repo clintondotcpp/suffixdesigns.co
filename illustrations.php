@@ -59,6 +59,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J053QB4K19"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-J053QB4K19');
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -110,7 +119,7 @@
         $num = 21;
     ?>
     <?php foreach($products as $product){ ?>
-        <a href="single-product-page.php?product=<?php echo $product['product_id'];?>" id="link-color">
+        <a href="illustrationdetail.php?product=<?php echo $product['product_id'];?>" id="link-color">
         <div id="product-1" class="container">
             <img src="<?php echo $product['product_img'];?>">
                 <div class="text">
@@ -132,7 +141,7 @@
                 <a href="<?php if($pageno <= 1){echo '#';} else{echo "?pageno=".($pageno-1); }?>">Previous</a>
             </li>
             <li class="<?php if($pageno >= $total_pages){echo 'disabled';}?>">
-                <a href="<?php if($pageno >= 1){echo '#';} else{echo "?pageno=".($pageno + 1); }?>">Next</a>
+                <a href="<?php if($pageno >= $total_pages){echo '#';} else{echo "?pageno=".($pageno + 1); }?>">Next</a>
             </li>
             <li><a href="?pageno=<?php echo $total_pages; ?>">Last</a></li>
         </ul>
@@ -145,7 +154,7 @@
         <a href="mailto:info@suffixdesigns.co">Email Us</a>
     </section>
     <div class="gradient"></div>
-    <form action="/signup" method="post">
+    <form action="./newsletter.php" method="post">
     <section id="newsletter">
         <div class="newstext">
             <h4>Sign Up for our Newsletter and get a <span>FREE</span> Logo GIF</h4>
@@ -163,10 +172,10 @@
         <footer>
             <div class="column">
             <ul>
-                <li><a href="index.html"><img src="./Assets/suffixLogo.PNG" alt="suffixlogo"></a></li>
+                <li><a href="index.php"><img src="./Assets/suffixLogo.PNG" alt="suffixlogo"></a></li>
                 <li><p><strong>Phone:</strong> +(234) 7068734344</p></li>
                 <li><p><strong>Email:</strong> info@suffixdesigns.co</p></li>
-                <li><p><strong>Address:</strong> 10 East Gardens, Colliers Wood, London.</p></li>
+                <li><p><strong>Address:</strong> 10 East Gardens, Colliers Wood, London, United Kingdom.</p></li>
             </ul>
     
             <div class="follow">

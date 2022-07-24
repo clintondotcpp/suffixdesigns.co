@@ -28,7 +28,7 @@ body{
     margin: 0;
     font-family: var(--sans );
     background-color: white;
-    color: var(--white);
+    color: black;
     font-size: var(--font-size);
 }
 

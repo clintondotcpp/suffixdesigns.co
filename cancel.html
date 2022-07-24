@@ -2,10 +2,28 @@
 <html>
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J053QB4K19"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-J053QB4K19');
+  </script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Checkout canceled</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
   <script src="https://js.stripe.com/v3/"></script>
+  <script src="https://kit.fontawesome.com/9c58ab43d1.js" crossorigin="anonymous"></script>
+  <script src="./script.js" defer></script>
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
   <!-- Meta Pixel Code -->
   <script>
     ! function (f, b, e, v, n, t, s) {
@@ -35,9 +53,105 @@
 </head>
 
 <body>
-  <section>
+  <nav>
+    <span id="suffixlogo"><a href="./index.php"><img src="./Assets/suffixLogo.PNG"></a></span>
+    <ul id="navbar">
+      <li><a href="illustrations.php">Illustrations</a></li>
+      <li><a href="gifs.php">Cartoon GIFs</a></li>
+      <li><a href="photogif.php">Photo GIFs</a></li>
+      <li><a href="logogif.php">Logo GIFs</a></li>
+      <li><a href="Logos.php">Logos</a></li>
+      <li><a href="fliers.php">Fliers</a></li>
+      <a href="#" id="close"><span class="fa fa-times"></span></a>
+    </ul>
+    <div id="mobile">
+      <span id="bar" class="fa fa-bars" style="font-size:36px"></span>
+    </div>
+  </nav>
+  <div class="gradient"></div>
+  <section id="cancel">
     <p>Forgot to add something to your cart? Shop around then come back to pay!</p>
   </section>
+  <form action="/newsletter.php" method="post">
+    <section id="newsletter">
+      <div class="newstext">
+        <h4>Sign Up for our Newsletter and get a <span>FREE</span> Logo GIF</h4>
+        <p>Get E-mail updates on our lastest products and <span>special offers.</span></p>
+
+      </div>
+      <div class="form">
+        <input type="text" placeholder="Your email address" name="email">
+        <button>Sign Up</button>
+      </div>
+    </section>
+  </form>
+  <div class="gradient"></div>
+  <div class="section-black">
+    <footer>
+      <div class="column">
+        <ul>
+          <li><a href="index.php"><img src="./Assets/suffixLogo.PNG" alt="suffixlogo"></a></li>
+          <li>
+            <p><strong>Phone:</strong> +(234) 7068734344</p>
+          </li>
+          <li>
+            <p><strong>Email:</strong> info@suffixdesigns.co</p>
+          </li>
+          <li>
+            <p><strong>Address:</strong> 10 East Gardens, Colliers Wood, London.</p>
+          </li>
+        </ul>
+
+        <div class="follow">
+          <ul>
+            <li><a href="https://www.facebook.com/suffixdesigns"><span class="fa fa-facebook"
+                  aria-hidden="true"></span><span class="sr-only">Facabook</span></a></li>
+            <li><a href="https://www.instagram.com/suffix_designs"><span class="fa fa-instagram"
+                  aria-hidden="true"></span><span class="sr-only">Instagram</span></a></li>
+            <li><a href="https://wa.me/2348104933232"><span class="fa fa-whatsapp" aria-hidden="true"></span><span
+                  class="sr-only">Whatsapp</span></a></li>
+            <li><a href="https://m.me/suffixdesigns"><span class="fab fa-facebook-messenger"
+                  aria-hidden="true"></span><span class="sr-only">Messenger</span></a></li>
+            <li><a href="mailto:info@suffixdesigns.co"><span class="fa fa-envelope" aria-hidden="true"></span><span
+                  class="sr-only">E-mail</span></a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="column">
+        <div class="about">
+          <h4>Info</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="privacy.html">Terms & Conditions</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="copyright.html">Copyright</a></li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="column">
+        <div class="faq">
+          <h4>Faqs</h4>
+          <ul>
+
+            <li><a href="faqs.html#turnaround">Turnaround Time</a></li>
+            <li><a href="faqs.html#how-we-work">How we work</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© 2021-2022, Suffix Designs</p>
+      </div>
+      <div id="schedule-a-call">
+        <a href="calendly.php">
+          <p><small>Speak with us.</small></p>
+          <span class="fa fa-phone" aria-hidden="true"></span>
+        </a>
+      </div>
+    </footer>
 </body>
 
 </html>
