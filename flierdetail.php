@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-.error{color: #FF0000; font-size: 10px;}    
-</style>
-</head>
-<body>
-
 <?php
     require_once('lib/pdo_db.php');
 
@@ -36,7 +27,7 @@
             
    
            
-        
+        /*<?php echo $product['product_name'];?> */
 ?>
 
 
@@ -61,6 +52,7 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
     <script src="https://js.stripe.com/v3/"></script>
     <script src="./script.js" defer></script>
+    <script src="./validateupload.js" defer></script>
     <!-- Meta Pixel Code -->
 <script>
   !function(f,b,e,v,n,t,s)
@@ -95,63 +87,10 @@
         <span id= "bar" class="fa fa-bars" style="font-size:36px"></span> 
         </div>
     </nav>
+    <!--<form method="post" action="orderupload.php?product=/**/" enctype="multipart/form-data" id="order">-->
     <div class="gradient"></div>
-    <form method="post" action="orderupload.php?product=<?php echo $product['product_name'];?>" enctype="multipart/form-data">
+    
     <section id="single-product">
-        <?php
-            $email = $confirm_email = $headshot = $logo = "";
-            $emailErr = $confirm_emailErr = $headshotErr = $logoErr ="";
-
-            
-            if($_SERVER["REQUEST_METHOD"] == "POST"){
-                $instructions = test_input($_POST["instructions"]);
-            
-
-                function test_input($data){
-                    $data = trim($data);
-                    $data = stripslashes($data);
-                    $data = htmlspecialchars($data);
-                    return $data;
-                }
-
-                if(empty($_POST['email'])){
-                $emailErr = "Enter a valid Address";
-                }
-                else{
-                    $email = test_input($_POST["email"]);
-                    if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-                        $emailErr = "The email address is incorrect";
-                    }
-                }
-
-                if(empty($_POST['confirm_email'])){
-                    $confirm_emailErr = "Enter a valid Address";
-                 }
-                else{
-                    $email = test_input($_POST["confirm_email"]);
-                    if(!filter_var($confirm_email, FILTER_VALIDATE_EMAIL)){
-                        $confirm_emailErr = "The email address is incorrect";
-                    }
-                }
-
-                if(empty($_POST['headshot'])){
-                    $headshotErr = "Please upload a headshot";
-                }
-                else{
-                    $headshot = test_input($_POST['headshot']);
-                }
-
-                if(empty($_POST['logo'])){
-                    $logoErr = "Please upload a logo";
-                }
-                else{
-                    $logoErr = test_input($_POST['logo']);
-                }
-
-             }
-        
-?>
-
          <div class="product-image" id="<?php $product_id;?>">
             <h4><?php echo $product['product_name']; ?></h4>
             <h2>USD <?php echo $product['product_price']; ?></h2>
@@ -159,44 +98,42 @@
             <p><?php echo $product['product_description'];?></p>
          </div>
          <div class="product-main">
-            
-         
+         <form action="orderupload.php?product=<?php echo $product['stripe_id'];?>" method="POST" id="order" enctype="multipart/form-data">
+         <div id="error"></div>
          <div class="client-email">
             <div id="enter-email" class="email-box">
                 <label for="1st-email"><span class="fa fa-envelope" aria-hidden="true" name="1st-email"></span></label>
-                <input type="email"  placeholder="Your Email" name="email">
-                <span class="error"><?php echo $emailErr?></span>
+                <input type="email"  placeholder="Your Email" name="email" required>
+
            </div>
            <div id="confirm-email" class="email-box">
             <span class="fa fa-envelope" aria-hidden="true"></span>
-                <input type="email" class="confirm-email" placeholder="Confirm Email" name="confirm_email">
-                <span class="error"><?php echo $confirm_emailErr?></span>
+                <input type="email" class="confirm-email" placeholder="Confirm Email" name="confirm_email" required>
            </div> 
            
          </div>
          <div class="customer-assets">
              <p>Upload your headshots</p>
             <div class="headshot">
-                <input type="file" value="Upload your headshot/picture" name="headshot">
-                <span class="error">*<?php echo $headshotErr?></span>
+                <input type="file" value="Upload your headshot/picture" name="headshot" required>
             </div>
             <p>Upload your logos</p>
             <div class="logo">
-                <input type="file" placeholder="Upload your logo" name="logo" >
-                <span class="error"><?php echo $logoErr?></span>
+                <input type="file" placeholder="Upload your logo" name="logo" required>
             </div>
-            
         </div>
-
-         <div class="message">
-            <p>Tell us how you want your design customized e.g I want a lovely house in the background.</p>
-            <textarea name="instructions" id="instructions" cols="60" rows="10"></textarea>
+            <!--<label for="story">Tell us your story:</label><p>Tell us how you want your design customized e.g I want a lovely house in the background.</p>
+            <textarea name="instructions" id="client-instructions" cols="60" rows="10"></textarea>-->
+            <label for="orderinfo">Tell us how you want your design customized:</label>
+            <textarea id="orderinfo" name="instructions"rows="5" cols="33">I'd like a nice house in the background</textarea>
+            <div class="message">
          </div>
-            </form>
-            <form action="./create-checkout-session.php?product=<?php echo $product['stripe_id'];?>" method="POST">
-           <button type="submit" id="checkout-button">Checkout</button>
-           </form>
         </div>
+    
+            
+    
+           <button type="submit" name="submit" id="checkout-button">Checkout</button>
+           </form>
         
          
     </section>
