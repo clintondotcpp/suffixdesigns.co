@@ -1,3 +1,15 @@
+<style>
+    .form-control small{
+        visibility: hidden;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    .form-control.error input{
+        border-color: #e74c3c;
+    }
+</style>
 <?php
     require_once('lib/pdo_db.php');
 
@@ -52,7 +64,7 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
     <script src="https://js.stripe.com/v3/"></script>
     <script src="./script.js" defer></script>
-    <script src="./validateupload.js" defer></script>
+    
     <!-- Meta Pixel Code -->
 <script>
   !function(f,b,e,v,n,t,s)
@@ -87,10 +99,11 @@
         <span id= "bar" class="fa fa-bars" style="font-size:36px"></span> 
         </div>
     </nav>
-    <!--<form method="post" action="orderupload.php?product=/**/" enctype="multipart/form-data" id="order">-->
+    
     <div class="gradient"></div>
     
     <section id="single-product">
+        <form  id="myform" name="myform" action="orderupload.php?product=<?php echo $product['stripe_id'];?>" method="POST"  enctype="multipart/form-data">
          <div class="product-image" id="<?php $product_id;?>">
             <h4><?php echo $product['product_name']; ?></h4>
             <h2>USD <?php echo $product['product_price']; ?></h2>
@@ -98,41 +111,114 @@
             <p><?php echo $product['product_description'];?></p>
          </div>
          <div class="product-main">
-         <form action="orderupload.php?product=<?php echo $product['stripe_id'];?>" method="POST" id="order" enctype="multipart/form-data">
          <div id="error"></div>
          <div class="client-email">
             <div id="enter-email" class="email-box">
                 <label for="1st-email"><span class="fa fa-envelope" aria-hidden="true" name="1st-email"></span></label>
                 <input type="email"  placeholder="Your Email" name="email" required>
-
+                
            </div>
            <div id="confirm-email" class="email-box">
             <span class="fa fa-envelope" aria-hidden="true"></span>
                 <input type="email" class="confirm-email" placeholder="Confirm Email" name="confirm_email" required>
+                
            </div> 
            
          </div>
          <div class="customer-assets">
              <p>Upload your headshots</p>
-            <div class="headshot">
-                <input type="file" value="Upload your headshot/picture" name="headshot" required>
+            <div class="headshot form-control error">
+                <input type="file" value="Upload your headshot/picture" name="myheadshot" id="myheadshot" required>
+                <small>Error Message</small>
             </div>
             <p>Upload your logos</p>
-            <div class="logo">
-                <input type="file" placeholder="Upload your logo" name="logo" required>
+            <div class="logo form-control error">
+                <input type="file" placeholder="Upload your logo" name="mylogo" id="mylogo" required>
+                <small>Error Message</small>
             </div>
+            
         </div>
             <!--<label for="story">Tell us your story:</label><p>Tell us how you want your design customized e.g I want a lovely house in the background.</p>
             <textarea name="instructions" id="client-instructions" cols="60" rows="10"></textarea>-->
             <label for="orderinfo">Tell us how you want your design customized:</label>
-            <textarea id="orderinfo" name="instructions"rows="5" cols="33">I'd like a nice house in the background</textarea>
+            <textarea id="orderinfo" name="instructions"rows="5" cols="33"></textarea>
             <div class="message">
          </div>
         </div>
     
             
     
-           <button type="submit" name="submit" id="checkout-button">Checkout</button>
+        <button type="submit" name="submit" id="checkout-button" onclick="return fileValidation()">Checkout</button>
+        <script>
+             var email = document.getElementByName('email');
+            var confirmEmail = document.getElementByName('confirm_email');
+
+            function checkInput(){
+                const emailValue = email.value.trim();
+                const confirmEmailValue = document.value.trim();
+
+                if(emailValue === ""){
+                    showMessage(email, 'Email cannot be empty');
+                }else{
+                    showSuccessFor(email);
+                }
+                if(confirmEmailValue === ""){
+                    showMessage(confirmEmail, 'please confirm your email');
+                }else{
+                    showSuccessFor(confirmEmail);
+                }
+            }
+            function fileValidation() {
+           
+            var fileInput =
+                document.getElementById('myheadshot');
+            var fileInput2 = document.getElementById('mylogo');
+             
+            var filePath = fileInput.value;
+            var filePath2 = fileInput2.value;
+            
+            // Allowing file type
+            var allowedExtensions =
+            /(\.gif|\.jpeg|\.png|\.jpg)$/i;
+            
+            if(file)
+            if (!allowedExtensions.exec(filePath)) {
+                alert('Invalid file type');
+                //showMessage(fileInput, "Invalid file type")
+                fileInput.value = '';
+                return false;
+            }else if(fileInput.files[0].size/(1024*1024)>=10){
+                alert('File size must be smaller than 10 mb');
+                //showMessage(fileInput, "File size must be smaller than 10mb")
+                fileInput.value = '';
+                return false;
+            }
+
+            if (!allowedExtensions.exec(filePath2)) {
+                alert('Invalid file type');
+                //showMessage(fileInput2, "invalid file type");
+                fileInput2.value = '';
+                return false;
+            }else if(fileInput2.files[0].size/(1024*1024)>=10){
+                alert('File size must be smaller than 10 mb');
+                /*showMessage(fileInput2, "File size must be smaller than 10mb");*/
+                fileInput2.value = '';
+                return false;
+            }
+        }
+        function showMessage(input, message){
+            const formControl = input.parentElement;
+            const small = formControl.querySelector('small');
+            small.innerText = message;
+
+            formControl.className = 'form-control error'
+        }
+        function setSuccessFor(input){
+            const formControl = input.parentElement;
+            formControl.className = 'form-control success';
+        }
+        
+    </script>
            </form>
         
          
@@ -212,6 +298,7 @@
         </footer>
         </div>
 </body>
+
 </html>
 
 <?php

@@ -1,27 +1,10 @@
 <?php
-
     define('KB', 1024);
     define('MB', 1048576);
     define('GB', 1073741824);
     define('TB', 1099511627776);
 
     $product = $_GET['product'];
-
-
-    try{
-        $conn = new mysqli('localhost', 'Kurinton', '@@90210@@', 'illustrations');
-        if($conn->connect_error){
-            $error = $conn->connect_error;
-        }
-     $sql = 'SELECT  `product_id`, `product_name`, `product_img`, `product_price`, `product_description`, `stripe_id` FROM products WHERE `product_id` = '.$product.' LIMIT 1'; //TODO
-        $result = $conn->query($sql);
-        
-    } catch(Exception $e){
-        $error = $e->getMessage();
-    }
-
-    $productID = $_GET['product_id'];
-    $productName = $_GET['product_name'];
 
 
     $conn = new mysqli("localhost", "Kurinton", "@@90210@@", "orders");
@@ -37,28 +20,25 @@
         $email = $_POST['email'];
         $confirm_email = $_POST['confirm_email'];
         $instructions = $_POST['instructions'];
-        $headshot = $_FILES['headshot'];
-        $logo = $_FILES['logo'];
-        //echo "<pre>";
-        //print_r($logo);
-        //print_r($headshot);
-        //echo "<pre>";
+        $headshot = $_FILES['myheadshot'];
+        $logo = $_FILES['mylogo'];
+        
 
         /*To access the array, because files returns an array */
         $headshotFileName = $headshot['name'];
         $logoFileName = $logo['name'];
-        //print_r($headshotFileName);
+        
         $headshotFileError = $headshot['error'];
         $logoFileError = $logo['error'];
-        //print_r($headshotFileError);
+       
         
         $headshotFileTemp = $headshot['tmp_name'];
         $logoFileTemp = $logo['tmp_name'];
-        //print_r($headshotFileTemp);
+        
 
         $headshotExtensionSeparator = explode('.',$headshotFileName);
         $logoExtensionSeparator = explode('.', $logoFileName);
-        //print_r($filename_separator);
+        
 
         $file_extension = strtolower($headshotExtensionSeparator[1]);
         $file_extension2 = strtolower($logoExtensionSeparator[1]);
@@ -70,7 +50,7 @@
             $upload_logo = 'clientfolder/'.$logoFileName;
             move_uploaded_file($headshotFileTemp, $upload_headshot);
             move_uploaded_file($logoFileTemp, $upload_logo);
-            $sql = "insert into `order_list` (pemail, confirm_email, headshot, logo, instructions) values ('$email', '$confirm_email', '$upload_headshot', '$upload_logo', '$instructions')";
+            $sql = "insert into `order_list` (email, confirm_email, headshot, logo, instructions) values ('$email', '$confirm_email', '$upload_headshot', '$upload_logo', '$instructions')";
             $result = mysqli_query($conn, $sql);
             if($result){
                 echo "Data inserted successfully";

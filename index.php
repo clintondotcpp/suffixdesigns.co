@@ -18,6 +18,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suffix Designs: Illustrations, Logos, GIFs and Fliers</title>
+     <!-- CSS only -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
     <script src="./script.js" defer></script>
     <script src="https://kit.fontawesome.com/9c58ab43d1.js" crossorigin="anonymous"></script>
@@ -42,200 +49,223 @@
 <!-- End Meta Pixel Code -->
 </head>
 <body>
-    <nav>
-        <span id="suffixlogo"><a href="./index.php"><img src="./Assets/suffixLogo.PNG"></a></span>
-        <ul id="navbar">
-        <li><a href="illustrations.php">Illustrations</a></li>
-            <li><a href="gifs.php">Cartoon GIFs</a></li>
-            <li><a href="photogif.php">Photo GIFs</a></li>
-            <li><a href="logogif.php">Logo GIFs</a></li>
-            <li><a href="Logos.php">Logos</a></li>
-            <li><a href="fliers.php">Fliers</a></li>
-            <a href="#" id="close"><span class="fa fa-times"></span></a>
-        </ul>
-        <div id="mobile">
-        <span id= "bar" class="fa fa-bars" style="font-size:36px"></span>
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.php"><img src="./Assets/suffixlogo.PNG" alt="" width="100" height="100"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.php">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Custom Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.php">Blog</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Illustrations</a></li>
+                            <li><a class="dropdown-item" href="#">Cartoon GIFs</a></li>
+                            <li><a class="dropdown-item" href="#">Logos</a></li>
+                            <li><a class="dropdown-item" href="#">Fliers</a></li>
+                            <li><a class="dropdown-item" href="#">Logo GIFs</a></li>
+                            <li><a class="dropdown-item" href="#">Photo GIFs</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Schedule a call</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+                <!--<form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>-->
+            </div>
         </div>
     </nav>
-        <!--<p>Illustrations, GIFs, Logos and Fliers</p>
-        <p><span>We make stunning designs </span> for businesses and professionals</p>-->
     <div class="gradient"></div>
-    <section id="intro">
-        
-    </section>
-
-    <section id= "suffix-info">
-        <h3>About Suffix Designs</h3>
-        <p>We are a team of digital artists and animators. We create illustrations, animations, logos, fliers, etc for individuals, professionals and businesses.
-        </p>
-        <a href="./calendly.php"> Schedule a call <span class="fa fa-phone" aria-hidden="true"></span></a>
-    </section>
     
-    <div class="section-white">
+   <section class="intro">
+   <div class="px-4 py-5 my-5 text-center">
+    <img class="d-block mx-auto mb-4" src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+    <h1 class="display-5 fw-bold">Custom Illustrations, Logos, Animations, commercial designs and websites</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Schedule a call</button>
+        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Custom order</button>
+      </div>
+    </div>
+  </div>
+   </section>
     <section id="categories">
-            <a href="illustrations.php">
-             <div id="illustrations" class="container">
-                <img src="img/Template 004.jpg" alt="Template 1">
-                <div class="text">
-                <h2>Illustrations</h2>
-                <p>$150</p>
-              </div>
-             </div>
-            </a>
-        <a href="gifs.php">
-        <div id="gifs" class="container">
-            <video autoplay loop muted>
-                <source src="./Assets/GIFs/Template 001.mp4" type="video/mp4">
-                <source src="./Assets/GIFs/Template 001.ogg" type="video/ogg">
-            </video>
-            <div class="text">
-             <h2>Cartoon GIFs</h2>
-              <p>$300</p>
-            </div>
-        </div>
-        </a>
-        
-        <a href="logos.php">
-        <div class="container" id="logos">
-                <img src="./Assets/Logos/Template 001.PNG" alt="Logos">
-                <div class="text">
-                  <h2>Logos</h2>
-                  <p>$200</p>
+    <div class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col-lg-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="./img/Template 021.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Illustrations</h5>
+                        <p class="card-text">USD 150</p>
+                        <a href="illustrations.php" class="btn btn-primary">View catalog</a>
+                    </div>
                 </div>
-        </div>
-        </a>
-
-
-        <a href="fliers.php">
-        <div id="fliers" class="container">
-                <img src="./Assets/Fliers/Template 001.jpg" alt="Fliers">
-                <div class="text">
-                <h2>Fliers</h2>
-                <p>$100</p>
+            </div>
+            <div class="col-lg-4">
+                <div class="card" style="width: 18rem;">
+                    <video src="GIF/Template 003.MP4" autoplay loop muted></video>
+                    <div class="card-body">
+                        <h5 class="card-title">Cartoon GIFs</h5>
+                        <p class="card-text">USD 300</p>
+                        <a href="illustrations.php" class="btn btn-primary">View catalog</a>
+                    </div>
                 </div>
-        </div>
-        </a>
-
-        <a href="logogif.php">
-        <div id="logo-gifs" class="container">
-            <video autoplay loop muted>
-                <source src="LOGOGIF/Template 001.mp4" type="video/mp4">
-                <source src="LOGOGIF/Template 001.ogg" type="video/ogg">
-            </video>
-            <div class="text">
-              <h2>Logo GIF</h2>
-              <p>$50</p>
+            </div>
+            <div class="col-lg-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="LOGO/Template 001.PNG" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Logos</h5>
+                        <p class="card-text">USD 300</p>
+                        <a href="illustrations.php" class="btn btn-primary">View catalog</a>
+                    </div>
+                </div>
             </div>
         </div>
-        </a>
-
-        <a href="photogif.php">
-            <div id="photo-gifs" class="container">
-                <video autoplay loop muted>
-                    <source src="PHOTOGIF/Template 001.mp4" type="video/mp4">
-                    <source src="PHOTOGIF/Template 001.ogg" type="video/mp4">
-                </video>
-            <div class="text">
-                <h2>Photo GIF</h2>
-                <p>$50</p>
+        <div class="row justify-content-center">
+            <div class="col-lg-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="FLIERS/Template 001.JPG" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Fliers</h5>
+                        <p class="card-text">USD 100</p>
+                        <a href="illustrations.php" class="btn btn-primary">View catalog</a>
+                    </div>
+                </div>
             </div>
+            <div class="col-lg-4 ">
+                <div class="card" style="width: 18rem;">
+                <video src="LOGOGIF/Template 001.MP4" autoplay loop muted></video>
+                    <div class="card-body">
+                        <h5 class="card-title">Logo GIFs</h5>
+                        <p class="card-text">USD 50</p>
+                        <a href="illustrations.php" class="btn btn-primary">View catalog</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card" style="width: 18rem;">
+                <video src="PHOTOGIF/Template 001.MP4" autoplay loop muted></video>
+                    <div class="card-body">
+                        <h5 class="card-title">Photo GIFs</h5>
+                        <p class="card-text">USD 50</p>
+                        <a href="illustrations.php" class="btn btn-primary">View catalog</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    
+<section id="clients">
+<div class="container text-center">
+  <div class="row row-cols-6 justify-content-center">
+    <div class="col">
+        <img src="./Assets/Reviews/client1.JPG" alt="" width="50" height="50" >
+    </div>
+    <div class="col">
+    <img src="./Assets/Reviews/client2.JPG" alt="" width="50" height="50" >
+    </div>
+    <div class="col">
+    <img src="./Assets/Reviews/client3.jpg" alt="" width="50" height="50" >
+    </div>
+    <div class="col">
+    <img src="./Assets/Reviews/client4.jpg" alt="" width="50" height="50" >
+    </div>
+    <div class="col">
+    <img src="./Assets/Reviews/client5.jpg" alt="" width="50" height="50" >
+    </div>
+    <div class="col">
+    <img src="./Assets/Reviews/client6.jpg" alt="" width="50" height="50" >
+    </div>
+  </div>
+</div>
+</section>
+
+<footer class="py-5 bg-dark">
+    <div class="row">
+      <div class="col-6 col-md-2 mb-3">
+        <h5 class="text-white">Help</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h5 class="text-white">Faq</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h5 class="text-white">Info</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-5 offset-md-1 mb-3">
+        <form>
+          <h5>Subscribe to our newsletter</h5>
+          <p>Monthly digest of what's new and exciting from us.</p>
+          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+            <label for="newsletter1" class="visually-hidden">Email address</label>
+            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+            <button class="btn btn-primary" type="button">Subscribe</button>
           </div>
-        </a>
-        
-    </section>
+        </form>
+      </div>
     </div>
 
-    
-    
-    
-    
-    <div class="gradient"></div>
-    <div class="section-white">
-    <section id="clients">
-        <div>
-        <h4>Our clients</h4>
-        </div>
-        <div class="client">
-        <img src="./Assets/Reviews/client1.JPG">
-        <img src="./Assets/Reviews/client2.JPG">
-        <img src="./Assets/Reviews/client3.JPG">
-        <img src="./Assets/Reviews/client4.JPG">
-        <img src="./Assets/Reviews/client5.JPG">
-        <img src="./Assets/Reviews/client6.jpg">
-        </div>
-    </section>
-   </div>
-    <div class="gradient"></div>
-
-<form action="/newsletter.php" method="POST">
-    <section id="newsletter">
-        <div class="newstext">
-            <h4>Sign Up for our Newsletter and get a <span>FREE</span> Logo GIF</h4>
-            <p>Get E-mail updates on our lastest products and <span>special offers.</span></p>
-        </div>
-
-        <div class="form">
-            <input type="text" placeholder="Your email address" name="email">
-            <button>Sign Up</button>
-        </div>
-    </section>
-</form>
-    <div class="gradient"></div>
-    <div class="section-black">
-    <footer>
-        <div class="column">
-        <ul>
-            <li><a href=""><img src="./Assets/suffixLogo.PNG" alt="suffixlogo"></a></li>
-            <li><p><strong>Phone:</strong> +(234) 7068734344</p></li>
-            <li><p><strong>Email:</strong> info@suffixdesigns.co</p></li>
-            <li><p><strong>Address:</strong> 10 East Gardens, Colliers Wood, London, United Kingdom.</p></li>
-        </ul>
-        <div class="follow">
-        <ul>
-            <li><a href="https://www.facebook.com/suffixdesigns"><span class="fa fa-facebook" aria-hidden="true"></span><span class="sr-only">Facabook</span></a></li>
-            <li><a href="https://www.instagram.com/suffix_designs"><span class="fa fa-instagram" aria-hidden="true"></span><span class="sr-only">Instagram</span></a></li>
-            <li><a href="https://wa.me/2348104933232"><span class="fa fa-whatsapp" aria-hidden="true"></span><span class="sr-only">Whatsapp</span></a></li>
-            <li><a href="https://m.me/suffixdesigns"><span class="fab fa-facebook-messenger" aria-hidden="true"></span><span class="sr-only">Messenger</span></a></li>
-            <li><a href="mailto:info@suffixdesigns.co"><span class="fa fa-envelope" aria-hidden="true"></span><span class="sr-only">E-mail</span></a></li>
-        </ul>
-        </div>
-
-        </div>
-
-        <div class="column">
-        <div class="about">
-            <h4>Info</h4>
-            <ul>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="privacy.html">Privacy Policy</a></li>
-                <li><a href="privacy.html">Terms & Conditions</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="copyright.html">Copyright</a></li>
-            </ul>
-        </div>
-
-        </div>
-        <div class="column">
-            <div class="faq">
-             <h4>Faqs</h4>
-            <ul>
-            <li><a href="faqs.html#turnaround">Turnaround Time</a></li>
-            <li><a href="faqs.html#how-we-work">How we work</a></li>
-            <li><a href="refundpolicy.html">Refund Policy</a></li>
-            </ul>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>© 2021-2022, Suffix Designs</p>
-        </div>
-        <!--<div id="schedule-a-call">
-            <a href="calendly.php">
-                <p><small>Speak with us.</small></p>
-                <span class="fa fa-phone" aria-hidden="true"></span>
-            </a>
-       </div>-->
-    </footer>
+    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+      <p class="text-white">© 2022 Suffix Designs. All rights reserved.</p>
+      <ul class="list-unstyled d-flex">
+        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+      </ul>
     </div>
+  </footer>
+
 </body>
 
 </html>
