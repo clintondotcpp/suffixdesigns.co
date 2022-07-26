@@ -102,10 +102,9 @@
     
    <section class="intro">
    <div class="px-4 py-5 my-5 text-center">
-    <img class="d-block mx-auto mb-4" src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
-    <h1 class="display-5 fw-bold">Custom Illustrations, Logos, Animations, commercial designs and websites</h1>
+    <h1 class="display-5 fw-bold mt-5">Custom Illustrations, Logos, Animations, commercial designs and websites</h1>
     <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+      <p class="lead mb-4">Digital design studio operating in the United Kingdom. We create custom illustrations, logos, art portraits, animations/GIFs, commercial designs and websites for individuals, professionals and businesses globally. Connect with us by scheduling a call or emailing.</p>
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
         <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Schedule a call</button>
         <button type="button" class="btn btn-outline-secondary btn-lg px-4">Custom order</button>
@@ -114,8 +113,8 @@
   </div>
    </section>
     <section id="categories">
-    <div class="container text-center">
-        <div class="row justify-content-center">
+    <div class="container text-center my-5">
+        <div class="row my-5">
             <div class="col-lg-4">
                 <div class="card" style="width: 18rem;">
                     <img src="./img/Template 021.png" class="card-img-top" alt="...">
@@ -132,7 +131,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Cartoon GIFs</h5>
                         <p class="card-text">USD 300</p>
-                        <a href="illustrations.php" class="btn btn-primary">View catalog</a>
+                        <a href="gifs.php" class="btn btn-primary">View catalog</a>
                     </div>
                 </div>
             </div>
@@ -142,19 +141,19 @@
                     <div class="card-body">
                         <h5 class="card-title">Logos</h5>
                         <p class="card-text">USD 300</p>
-                        <a href="illustrations.php" class="btn btn-primary">View catalog</a>
+                        <a href="logos.php" class="btn btn-primary">View catalog</a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row justify-content-center">
+        <div class="row my-5">
             <div class="col-lg-4">
                 <div class="card" style="width: 18rem;">
                     <img src="FLIERS/Template 001.JPG" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Fliers</h5>
                         <p class="card-text">USD 100</p>
-                        <a href="illustrations.php" class="btn btn-primary">View catalog</a>
+                        <a href="fliers.php" class="btn btn-primary">View catalog</a>
                     </div>
                 </div>
             </div>
@@ -164,7 +163,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Logo GIFs</h5>
                         <p class="card-text">USD 50</p>
-                        <a href="illustrations.php" class="btn btn-primary">View catalog</a>
+                        <a href="logogif.php" class="btn btn-primary">View catalog</a>
                     </div>
                 </div>
             </div>
@@ -174,7 +173,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Photo GIFs</h5>
                         <p class="card-text">USD 50</p>
-                        <a href="illustrations.php" class="btn btn-primary">View catalog</a>
+                        <a href="photogif.php" class="btn btn-primary">View catalog</a>
                     </div>
                 </div>
             </div>
@@ -184,31 +183,49 @@
 
     
 <section id="clients">
-<div class="container text-center">
+<div class="container text-center mb-4">
   <div class="row row-cols-6 justify-content-center">
     <div class="col">
-        <img src="./Assets/Reviews/client1.JPG" alt="" width="50" height="50" >
+        <img src="./Assets/Reviews/client1.JPG" alt="" width="75" height="75" class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5">
     </div>
     <div class="col">
-    <img src="./Assets/Reviews/client2.JPG" alt="" width="50" height="50" >
+    <img src="./Assets/Reviews/client2.JPG" alt="" width="75" height="75" >
     </div>
     <div class="col">
-    <img src="./Assets/Reviews/client3.jpg" alt="" width="50" height="50" >
+    <img src="./Assets/Reviews/client3.jpg" alt="" width="75" height="75" >
     </div>
     <div class="col">
-    <img src="./Assets/Reviews/client4.jpg" alt="" width="50" height="50" >
+    <img src="./Assets/Reviews/client4.jpg" alt="" width="75" height="75" >
     </div>
     <div class="col">
-    <img src="./Assets/Reviews/client5.jpg" alt="" width="50" height="50" >
+    <img src="./Assets/Reviews/client5.jpg" alt="" width="75" height="75" >
     </div>
     <div class="col">
-    <img src="./Assets/Reviews/client6.jpg" alt="" width="50" height="50" >
+    <img src="./Assets/Reviews/client6.jpg" alt="" width="75" height="75" >
+    </div>
+    <div class="col">
+    <img src="./Assets/Reviews/client7.jpg" alt="" width="75" height="75" >
+    </div>
+    <div class="col">
+    <img src="./Assets/Reviews/client8.jpg" alt="" width="75" height="75" >
+    </div>
+    <div class="col">
+    <img src="./Assets/Reviews/client9.jpg" alt="" width="75" height="75" >
+    </div>
+    <div class="col">
+    <img src="./Assets/Reviews/client10.png" alt="" width="75" height="75" >
+    </div>
+    <div class="col">
+    <img src="./Assets/Reviews/client11.jpg" alt="" width="75" height="75" >
+    </div>
+    <div class="col">
+    <img src="./Assets/Reviews/client12.png" alt="" width="75" height="75" >
     </div>
   </div>
 </div>
 </section>
 
-<footer class="py-5 bg-dark">
+<footer class="py-5 px-3 bg-dark">
     <div class="row">
       <div class="col-6 col-md-2 mb-3">
         <h5 class="text-white">Help</h5>
@@ -245,8 +262,8 @@
 
       <div class="col-md-5 offset-md-1 mb-3">
         <form>
-          <h5>Subscribe to our newsletter</h5>
-          <p>Monthly digest of what's new and exciting from us.</p>
+          <h5 class="text-white">Subscribe to our newsletter</h5>
+          <p class="text-white">Monthly digest of what's new and exciting from us.</p>
           <div class="d-flex flex-column flex-sm-row w-100 gap-2">
             <label for="newsletter1" class="visually-hidden">Email address</label>
             <input id="newsletter1" type="text" class="form-control" placeholder="Email address">

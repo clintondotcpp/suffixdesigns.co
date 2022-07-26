@@ -14,8 +14,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suffix Designs Email Signup</title>
-    <link rel="stylesheet" type="text/css" href="./css/emailsignup.css">
-    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+     <!-- CSS only -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+    </script>
     <script src="https://kit.fontawesome.com/9c58ab43d1.js" crossorigin="anonymous"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
     <script src="https://js.stripe.com/v3/"></script>
@@ -48,29 +53,63 @@
     <!-- End Meta Pixel Code -->
 </head>
 <body>
-<nav>
-        <span id="suffixlogo"><a href="./index.html"><img src="./Assets/suffixLogo.PNG"></a></span>
-        <ul id="navbar">
-            <li><a href="illustrations.php">Illustrations</a></li>
-            <li><a href="gifs.php">Cartoon GIFs</a></li>
-            <li><a href="photogif.php">Photo GIFs</a></li>
-            <li><a href="logogif.php">Logo GIFs</a></li>
-            <li><a href="Logos.php">Logos</a></li>
-            <li><a href="fliers.php">Fliers</a></li>
-            <a href="#" id="close"><span class="fa fa-times"></span></a>
-        </ul>
-        <div id="mobile">
-            <span id="bar" class="fa fa-bars" style="font-size:36px"></span>
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.php"><img src="./Assets/suffixlogo.PNG" alt="" width="100" height="100"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="./index.php">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Custom Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.php">Blog</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Illustrations</a></li>
+                            <li><a class="dropdown-item" href="#">Cartoon GIFs</a></li>
+                            <li><a class="dropdown-item" href="#">Logos</a></li>
+                            <li><a class="dropdown-item" href="#">Fliers</a></li>
+                            <li><a class="dropdown-item" href="#">Logo GIFs</a></li>
+                            <li><a class="dropdown-item" href="#">Photo GIFs</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Schedule a call</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+                <!--<form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>-->
+            </div>
         </div>
     </nav>
-    <div class="gradient"></div>
+   
     <div class="container">
         <section class="row mt-5 text-center">
             <div class="col-md-6 m-auto">
                 <h1><span class="fas fa-newspaper fa-2x"></span></h1>
                 <h1 clas="dispay-4">Newsletter Signup</h1>
                 <p class="lead">
-                    Enter your info for a chance to get a free animated sticker
+                    Enter your info for a chance to get a free custom animated sticker/GIF for your business
                 </p>
                 <form action="./leadgeneration.php" method="POST">
                     <div class="form-group">

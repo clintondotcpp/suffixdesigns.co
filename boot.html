@@ -16,176 +16,140 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+
+    <?php
+    //connect to database
+    $conn = mysqli_connect('localhost', 'Kurinton', '@@90210@@', 'illustrations');
+    
+    //check connection
+    if(!$conn){
+        echo 'Connection error: ' . mysqli_connect_error();
+    }
+
+    
+    /*
+        GET THE CURRENT PAGE NUMBER
+        This code will get the current page number with the help of
+        $_GET Array. Note that if it is not present, it will set the default page 
+        number to 1
+    */
+    if(isset($_GET['pageno'])){
+        $pageno = $_GET['pageno'];
+    } else{
+        $pageno = 1;
+    }
+
+    /*
+    THE FORMULA FOR PHP PAGINATION
+    You can always manage the number of records to be displayed
+    in a page by changing the value of $no_of_products_per_page
+     */
+    $no_of_products_per_page = 10;
+    $offset = ($pageno-1) * $no_of_products_per_page;
+    
+    /*
+        get the number of total number of pages
+
+    */
+    $total_pages_sql = "SELECT COUNT(*) FROM products";
+    $result = mysqli_query($conn,$total_pages_sql);
+    $total_rows = mysqli_fetch_array($result)[0];
+    $total_pages = ceil($total_rows/$no_of_products_per_page);
+
+    /*Constructing the SQL Query for pagination*/
+    $sql = "SELECT * FROM products LIMIT $offset, $no_of_products_per_page";
+
+    //make query and get result
+    $result = mysqli_query($conn,$sql);
+
+    //fetch the resulting rows as an array
+    $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    
+
+    //print_r($products);
+
+    //free result from memory
+    mysqli_free_result($result);
+
+    //close the connection
+    mysqli_close($conn);
+?>
+
+
+
+    <section id="pagination" class="section-p1">
+        <ul class="pagination">
+            <li><a href="?pageno=1">1</a></li>
+            <li class="<?php if($pageno <= 1){echo 'disabled';}?>">
+                <a href="<?php if($pageno <= 1){echo '#';} else{echo "?pageno=".($pageno-1); }?>">Previous</a>
+            </li>
+            <li class="<?php if($pageno >= $total_pages){echo 'disabled';}?>">
+                <a href="<?php if($pageno >= $total_pages){echo '#';} else{echo "?pageno=".($pageno + 1); }?>">Next</a>
+            </li>
+            <li><a href="?pageno=<?php echo $total_pages; ?>">Last</a></li>
+        </ul>
+    </section>
+
+
+
+
+
+
+    <?php foreach($products as $product){ ?>
+    <a href="illustrationdetail.php?product=<?php echo $product['product_id'];?>" id="link-color">
+        <div id="product-1" class="container">
+            <img src="<?php echo $product['product_img'];?>">
+            <div class="text">
+                <p class="name"><?php echo htmlspecialchars($product['product_name']);?></p>
+                <p class="price">$<?php echo htmlspecialchars($product['product_price']);?></p>
             </div>
         </div>
-    </nav>
-    <div class="container text-center">
-        <div class="row">
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="./img/Template 021.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Illustrations</h5>
-                        <p class="card-text">USD 150</p>
-                        <a href="illustrations.php" class="btn btn-primary">View catalog</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="./img/Template 021.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Illustrations</h5>
-                        <p class="card-text">USD 150</p>
-                        <a href="illustrations.php" class="btn btn-primary">View catalog</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="./img/Template 021.png" class="card-img-top" alt="...">
-                    <img src="./Assets/Reviews/client3.jpg" alt="">
-                    <img src="./Assets/Reviews/client4.jpg" alt="">
-                    <img src="./Assets/Reviews/client5.JPG" alt="">
-                    <img src="./Assets/Reviews/client6.jpg" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title">Illustrations</h5>
-                        <p class="card-text">USD 150</p>
-                        <a href="illustrations.php" class="btn btn-primary">View catalog</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="./img/Template 021.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Illustrations</h5>
-                        <p class="card-text">USD 150</p>
-                        <a href="illustrations.php" class="btn btn-primary">View catalog</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="./img/Template 021.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Illustrations</h5>
-                        <p class="card-text">USD 150</p>
-                        <a href="illustrations.php" class="btn btn-primary">View catalog</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="./img/Template 021.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Illustrations</h5>
-                        <p class="card-text">USD 150</p>
-                        <a href="illustrations.php" class="btn btn-primary">View catalog</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    </a>
+    <?php }?>
+
+
+    <section id="success">
+        <h2>Thank you for subscribing to our newsletter. We will contact you via email regarding your free Logo GIF😊
+        </h2>
+        <!--TODO-->
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <div class="col-md-12 text-center">
+
+        <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5"
+            src="../img/user-bar/c-1.png" alt="Image Description">
+        <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5"
+            src="../img/user-bar/c-2.png" alt="Image Description">
+        <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5"
+            src="../img/user-bar/c-3.png" alt="Image Description">
+        <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5"
+            src="../img/user-bar/c-4.png" alt="Image Description">
+        <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5"
+            src="../img/user-bar/c-5.png" alt="Image Description">
+        <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5"
+            src="../img/user-bar/c-6.png" alt="Image Description">
+        <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5"
+            src="../img/user-bar/c-7.png" alt="Image Description">
+        <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5"
+            src="../img/user-bar/c-8.png" alt="Image Description">
+        <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5"
+            src="../img/user-bar/c-9.png" alt="Image Description">
+        <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5"
+            src="../img/user-bar/c-10.png" alt="Image Description">
+        <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5"
+            src="../img/user-bar/c-11.png" alt="Image Description">
+        <img class="g-width-110 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5"
+            src="../img/user-bar/c-12.png" alt="Image Description">
+
     </div>
-    <div class="container text-center">
-        <div class="row align-items-start">
-            <div class="col">
-                One of three columns
-            </div>
-            <div class="col">
-                One of three columns
-            </div>
-            <div class="col">
-                One of three columns
-            </div>
-        </div>
-        <div class="row align-items-center">
-            <div class="col">
-                One of three columns
-            </div>
-            <div class="col">
-                One of three columns
-            </div>
-            <div class="col">
-                One of three columns
-            </div>
-        </div>
-        <div class="row align-items-end">
-            <div class="col">
-                One of three columns
-            </div>
-            <div class="col">
-                One of three columns
-            </div>
-            <div class="col">
-                One of three columns
-            </div>
-        </div>
-    </div>
-</body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="card" style="width: 18rem;">
-    <img src="./img/Template 021.png" class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">Illustrations</h5>
-        <p class="card-text">USD 150</p>
-        <a href="illustrations.php" class="btn btn-primary">View catalog</a>
-    </div>
-</div>
-
 
 </html>

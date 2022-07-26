@@ -7,8 +7,38 @@
         echo 'Connection error: ' . mysqli_connect_error();
     }
 
-    //write querry from all products
-    $sql = 'SELECT `product_id`, `product_img`, `product_name`, `product_price` FROM products';
+    
+    /*
+        GET THE CURRENT PAGE NUMBER
+        This code will get the current page number with the help of
+        $_GET Array. Note that if it is not present, it will set the default page 
+        number to 1
+    */
+    if(isset($_GET['pageno'])){
+        $pageno = $_GET['pageno'];
+    } else{
+        $pageno = 1;
+    }
+
+    /*
+    THE FORMULA FOR PHP PAGINATION
+    You can always manage the number of records to be displayed
+    in a page by changing the value of $no_of_products_per_page
+     */
+    $no_of_products_per_page = 10;
+    $offset = ($pageno-1) * $no_of_products_per_page;
+    
+    /*
+        get the number of total number of pages
+
+    */
+    $total_pages_sql = "SELECT COUNT(*) FROM products";
+    $result = mysqli_query($conn,$total_pages_sql);
+    $total_rows = mysqli_fetch_array($result)[0];
+    $total_pages = ceil($total_rows/$no_of_products_per_page);
+
+    /*Constructing the SQL Query for pagination*/
+    $sql = "SELECT * FROM products LIMIT $offset, $no_of_products_per_page";
 
     //make query and get result
     $result = mysqli_query($conn,$sql);
@@ -25,11 +55,12 @@
     //close the connection
     mysqli_close($conn);
 
-
-
-
 ?>
 
+<style>
+  <?php include "./css/index.css" ?>
+</style>
+<!--<link rel="stylesheet" href="./css/index.css?v=<?php echo time(); ?>">-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,12 +76,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fliers</title>
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <title>Suffix Designs: Illustrations, Logos, GIFs and Fliers</title>
+     <!-- CSS only -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
     <script src="./script.js" defer></script>
+    <script src="https://kit.fontawesome.com/9c58ab43d1.js" crossorigin="anonymous"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
     <script src="https://js.stripe.com/v3/"></script>
-    <script src="https://kit.fontawesome.com/9c58ab43d1.js" crossorigin="anonymous"></script>
     <!-- Meta Pixel Code -->
 <script>
   !function(f,b,e,v,n,t,s)
@@ -70,120 +108,177 @@
 <!-- End Meta Pixel Code -->
 </head>
 <body>
-    
-    <nav>
-        <span id="suffixlogo"><a href="./index.php"><img src="./Assets/suffixLogo.PNG"></a></span>
-        <ul id="navbar">
-        <li><a href="illustrations.php">Illustrations</a></li>
-            <li><a href="gifs.php">Cartoon GIFs</a></li>
-            <li><a href="photogif.php">Photo GIFs</a></li>
-            <li><a href="logogif.php">Logo GIFs</a></li>
-            <li><a href="logos.php">Logos</a></li>
-            <li><a href="fliers.php">Fliers</a></li>
-            <a href="#" id="close"><span class="fa fa-times"></span></a>
-        </ul>
-        <div id="mobile">
-            <span id= "bar" class="fa fa-bars" style="font-size:36px"></span>
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.php"><img src="./Assets/suffixlogo.PNG" alt="" width="100" height="100"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="./index.php">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Custom Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.php">Blog</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Illustrations</a></li>
+                            <li><a class="dropdown-item" href="#">Cartoon GIFs</a></li>
+                            <li><a class="dropdown-item" href="#">Logos</a></li>
+                            <li><a class="dropdown-item" href="#">Fliers</a></li>
+                            <li><a class="dropdown-item" href="#">Logo GIFs</a></li>
+                            <li><a class="dropdown-item" href="#">Photo GIFs</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Schedule a call</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+                <!--<form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>-->
+            </div>
         </div>
     </nav>
-    <div class="gradient"></div>
-    <section id="products">
-    <h2 class="category-title">Fliers</h2>
+   
+<section class="products">
+<div class="container text-center my-5">
+<h4 class="display-5 fw-bold mt-5">Illustrations</h4>
+<div class="row my-5">
+<?php foreach($products as $product){ ?>
+<div class="col-lg-4">
+<div class="card" style="width: 18rem;">
+  <img src="<?php echo $product['product_img'];?>" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><?php echo htmlspecialchars($product['product_name']);?></h5>
+    <a href="flierdetail.php?product=<?php echo $product['product_id'];?>" id="link-color" class="btn btn-primary">Pay USD <?php echo htmlspecialchars($product['product_price']);?></a>
+  </div>
+</div>
+</div>
+<?php }?>
+</div>
+</div>
+</section>
+    
+<section id="clients">
+<div class="container text-center mb-4">
+  <div class="row row-cols-6 justify-content-center">
+    <div class="col">
+        <img src="./Assets/Reviews/client1.JPG" alt="" width="75" height="75" class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5">
+    </div>
+    <div class="col">
+    <img src="./Assets/Reviews/client2.JPG" alt="" width="75" height="75" >
+    </div>
+    <div class="col">
+    <img src="./Assets/Reviews/client3.jpg" alt="" width="75" height="75" >
+    </div>
+    <div class="col">
+    <img src="./Assets/Reviews/client4.jpg" alt="" width="75" height="75" >
+    </div>
+    <div class="col">
+    <img src="./Assets/Reviews/client5.jpg" alt="" width="75" height="75" >
+    </div>
+    <div class="col">
+    <img src="./Assets/Reviews/client6.jpg" alt="" width="75" height="75" >
+    </div>
+    <div class="col">
+    <img src="./Assets/Reviews/client7.jpg" alt="" width="75" height="75" >
+    </div>
+    <div class="col">
+    <img src="./Assets/Reviews/client8.jpg" alt="" width="75" height="75" >
+    </div>
+    <div class="col">
+    <img src="./Assets/Reviews/client9.jpg" alt="" width="75" height="75" >
+    </div>
+    <div class="col">
+    <img src="./Assets/Reviews/client10.png" alt="" width="75" height="75" >
+    </div>
+    <div class="col">
+    <img src="./Assets/Reviews/client11.jpg" alt="" width="75" height="75" >
+    </div>
+    <div class="col">
+    <img src="./Assets/Reviews/client12.png" alt="" width="75" height="75" >
+    </div>
+  </div>
+</div>
+</section>
 
-    <?php foreach($products as $product){ ?>
-        <a href="flierdetail.php?product=<?php echo $product['product_id'];?>">
-        <div id="product-1" class="container">
-            <img src="<?php echo $product['product_img'];?>">
-                <div class="text">
-                    <p></p>
-                    <p class="name"><?php echo htmlspecialchars($product['product_name']);?></p>
-                    <p class="price">USD <?php echo htmlspecialchars($product['product_price']);?></p>
-                </div>
-        </div>
-        </a>
-    <?php }?>
-    
-        
-            
-        
-            
-            
-            
-        
-    </section>
+<footer class="py-5 px-3 bg-dark">
+    <div class="row">
+      <div class="col-6 col-md-2 mb-3">
+        <h5 class="text-white">Help</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+      </div>
 
-    
-    <div class="gradient"></div>
-    <form action="/newsletter.php" method="post">
-    <section id="newsletter">
-        <div class="newstext">
-            <h4>Sign Up for our Newsletter and get a <span>FREE</span> Logo GIF</h4>
-            <p>Get E-mail updates on our lastest products and <span>special offers.</span></p>
-            
-        </div>
-        <div class="form">
-            <input type="text" placeholder="Your email address" name="email">
-            <button>Sign Up</button>
-        </div>
-    </section>
-    </form>
-    <div class="gradient"></div>
-    <div class="section-black">
-        <footer>
-            <div class="column">
-            <ul>
-                <li><a href="index.php"><img src="./Assets/suffixLogo.PNG" alt="suffixlogo"></a></li>
-                <li><p><strong>Phone:</strong> +(234) 7068734344</p></li>
-                <li><p><strong>Email:</strong> info@suffixdesigns.co</p></li>
-                <li><p><strong>Address:</strong> 10 East Gardens, Colliers Wood, London, United Kingdom.</p></li>
-            </ul>
-    
-            <div class="follow">
-            <ul>
-            <li><a href="https://www.facebook.com/suffixdesigns"><span class="fa fa-facebook" aria-hidden="true"></span><span class="sr-only">Facabook</span></a></li>
-            <li><a href="https://www.instagram.com/suffix_designs"><span class="fa fa-instagram" aria-hidden="true"></span><span class="sr-only">Instagram</span></a></li>
-            <li><a href="https://wa.me/2348104933232"><span class="fa fa-whatsapp" aria-hidden="true"></span><span class="sr-only">Whatsapp</span></a></li>
-            <li><a href="https://m.me/suffixdesigns"><span class="fab fa-facebook-messenger" aria-hidden="true"></span><span class="sr-only">Messenger</span></a></li>
-            <li><a href="mailto:info@suffixdesigns.co"><span class="fa fa-envelope" aria-hidden="true"></span><span class="sr-only">E-mail</span></a></li>
-            </ul>
-            </div>
-    
-            </div>
-    
-            <div class="column">
-            <div class="about">
-                <h4>Info</h4>
-                <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="privacy.html">Terms & Conditions</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="copyright.html">Copyright</a></li>
-                </ul>
-            </div>
-    
-            </div>
-            <div class="column">
-                <div class="faq">
-                 <h4>Faqs</h4>
-                <ul>
-               
-                <li><a href="faqs.html#turnaround">Turnaround Time</a></li>
-                <li><a href="faqs.html#how-we-work">How we work</a></li>
-                </ul>
-                </div>
-            </div>
-            <div class="copyright">
-            <p>© 2021-2022, Suffix Designs</p>
-            </div>
-            <div id="schedule-a-call">
-        <a href="calendly.php">
-            <p><small>Speak with us.</small></p>
-            <span class="fa fa-phone" aria-hidden="true"></span>
-        </a>
-       </div>
-        </footer>
-        </div>
-    
+      <div class="col-6 col-md-2 mb-3">
+        <h5 class="text-white">Faq</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h5 class="text-white">Info</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-5 offset-md-1 mb-3">
+        <form>
+          <h5 class="text-white">Subscribe to our newsletter</h5>
+          <p class="text-white">Monthly digest of what's new and exciting from us.</p>
+          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+            <label for="newsletter1" class="visually-hidden">Email address</label>
+            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+            <button class="btn btn-primary" type="button">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+      <p class="text-white">© 2022 Suffix Designs. All rights reserved.</p>
+      <ul class="list-unstyled d-flex">
+        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+      </ul>
+    </div>
+  </footer>
+
 </body>
 </html>
+
+
