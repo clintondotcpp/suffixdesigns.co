@@ -1,15 +1,3 @@
-<style>
-    .form-control small{
-        visibility: hidden;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-    }
-
-    .form-control.error input{
-        border-color: #e74c3c;
-    }
-</style>
 <?php
     require_once('lib/pdo_db.php');
 
@@ -24,7 +12,7 @@
         if($conn->connect_error){
             $error = $conn->connect_error;
         }
-     $sql = 'SELECT  `product_id`, `product_name`, `product_img`, `product_price`, `product_description`, `stripe_id` FROM products WHERE `product_id` = '.$id.' LIMIT 1'; //TODO
+     $sql = 'SELECT  `product_id`, `stripe_id`, `product_name`, `product_img`, `product_price`, `product_description`, `stripe_id` FROM products WHERE `product_id` = '.$id.' LIMIT 1'; //TODO
         $result = $conn->query($sql);
         
     } catch(Exception $e){
@@ -37,20 +25,26 @@
     }else{
         while($product = $result->fetch_assoc()){
             
-   
-           
-        /*<?php echo $product['product_name'];?> */
+    echo '<br>';
+    print_r($product['stripe_id']);
+    echo '<br>'   
 ?>
 
 
+
+<!--<link rel="stylesheet" href="./css/index.css?v=<?php echo time(); ?>">-->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J053QB4K19"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'G-J053QB4K19');
@@ -58,253 +52,219 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fliers: Template <?php echo $id?></title>
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <title>Suffix Designs: Illustrations, Logos, GIFs and Fliers</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+    </script>
+    <script src="form-validation.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+    <script src="./script.js" defer></script>
     <script src="https://kit.fontawesome.com/9c58ab43d1.js" crossorigin="anonymous"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
     <script src="https://js.stripe.com/v3/"></script>
-    <script src="./script.js" defer></script>
-    
     <!-- Meta Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '398201842366874');
-  fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=398201842366874&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+    <script>
+        ! function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '398201842366874');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=398201842366874&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
+
 <body>
-    <nav>
-        <span id="suffixlogo"><a href="./index.php"><img src="./Assets/suffixLogo.PNG"></a></span>
-        <ul id="navbar">
-        <li><a href="illustrations.php">Illustrations</a></li>
-            <li><a href="gifs.php">Cartoon GIFs</a></li>
-            <li><a href="photogif.php">Photo GIFs</a></li>
-            <li><a href="logogif.php">Logo GIFs</a></li>
-            <li><a href="Logos.php">Logos</a></li>
-            <li><a href="fliers.php">Fliers</a></li>
-            <a href="#" id="close"><span class="fa fa-times"></span></a>
-        </ul>
-        <div id="mobile">
-        <span id= "bar" class="fa fa-bars" style="font-size:36px"></span> 
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.php"><img src="./Assets/suffixlogo.PNG" alt="" width="100"
+                    height="100"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="./index.php">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Custom Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.php">Blog</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Illustrations</a></li>
+                            <li><a class="dropdown-item" href="#">Cartoon GIFs</a></li>
+                            <li><a class="dropdown-item" href="#">Logos</a></li>
+                            <li><a class="dropdown-item" href="#">Fliers</a></li>
+                            <li><a class="dropdown-item" href="#">Logo GIFs</a></li>
+                            <li><a class="dropdown-item" href="#">Photo GIFs</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Schedule a call</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <!--<form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>-->
+            </div>
         </div>
     </nav>
-    
-    <div class="gradient"></div>
-    
-    <section id="single-product">
-        <form  id="myform" name="myform" action="orderupload.php?product=<?php echo $product['stripe_id'];?>" method="POST"  enctype="multipart/form-data">
-         <div class="product-image" id="<?php $product_id;?>">
-            <h4><?php echo $product['product_name']; ?></h4>
-            <h2>USD <?php echo $product['product_price']; ?></h2>
-            <img src="<?php echo $product['product_img'];?>" alt="product-image">
-            <p><?php echo $product['product_description'];?></p>
-         </div>
-         <div class="product-main">
-         <div id="error"></div>
-         <div class="client-email">
-            <div id="enter-email" class="email-box">
-                <label for="1st-email"><span class="fa fa-envelope" aria-hidden="true" name="1st-email"></span></label>
-                <input type="email"  placeholder="Your Email" name="email" required>
-                
-           </div>
-           <div id="confirm-email" class="email-box">
-            <span class="fa fa-envelope" aria-hidden="true"></span>
-                <input type="email" class="confirm-email" placeholder="Confirm Email" name="confirm_email" required>
-                
-           </div> 
-           
-         </div>
-         <div class="customer-assets">
-             <p>Upload your headshots</p>
-            <div class="headshot form-control error">
-                <input type="file" value="Upload your headshot/picture" name="myheadshot" id="myheadshot" required>
-                <small>Error Message</small>
-            </div>
-            <p>Upload your logos</p>
-            <div class="logo form-control error">
-                <input type="file" placeholder="Upload your logo" name="mylogo" id="mylogo" required>
-                <small>Error Message</small>
-            </div>
-            
+    <section id="detail">
+    <div class="container my-5">
+    <div class="row g-5 px-5 py-5 mb-5">
+        <div class="col-md-5 col-lg-4 order-md-last py-5">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <?php echo $product['product_name']; ?>
+            </h4>
+            <h5>USD <?php echo $product['product_price']; ?></h5>
+            <img src="<?php echo $product['product_img'];?>" alt="" width="250" height="250">
+            <p><?php echo $product['product_description']?></p>
         </div>
-            <!--<label for="story">Tell us your story:</label><p>Tell us how you want your design customized e.g I want a lovely house in the background.</p>
-            <textarea name="instructions" id="client-instructions" cols="60" rows="10"></textarea>-->
-            <label for="orderinfo">Tell us how you want your design customized:</label>
-            <textarea id="orderinfo" name="instructions"rows="5" cols="33"></textarea>
-            <div class="message">
-         </div>
-        </div>
-    
-            
-    
-        <button type="submit" name="submit" id="checkout-button" onclick="return fileValidation()">Checkout</button>
-        <script>
-             var email = document.getElementByName('email');
-            var confirmEmail = document.getElementByName('confirm_email');
+        <div class="col-md-7 col-lg-8 py-5">
+            <form action="orderupload.php?product=<?php echo $product['stripe_id']?>" class="needs-validation" novalidate>
+            <div class="row gy-3">
+                <div class="col-12">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control needs-validation" id="email" placeholder="" required="">
+                    <div class="invalid-feedback">
+                        Email is required
+                    </div>
+                </div>
 
-            function checkInput(){
-                const emailValue = email.value.trim();
-                const confirmEmailValue = document.value.trim();
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">Upload Headshot</label>
+                    <input class="form-control needs-validation" type="file" id="formFile" name="headshot" required>
+                    <div class="invalid-feedback">
+                        Headshot is required
+                    </div>
+                </div>
 
-                if(emailValue === ""){
-                    showMessage(email, 'Email cannot be empty');
-                }else{
-                    showSuccessFor(email);
-                }
-                if(confirmEmailValue === ""){
-                    showMessage(confirmEmail, 'please confirm your email');
-                }else{
-                    showSuccessFor(confirmEmail);
-                }
-            }
-            function fileValidation() {
-           
-            var fileInput =
-                document.getElementById('myheadshot');
-            var fileInput2 = document.getElementById('mylogo');
-             
-            var filePath = fileInput.value;
-            var filePath2 = fileInput2.value;
-            
-            // Allowing file type
-            var allowedExtensions =
-            /(\.gif|\.jpeg|\.png|\.jpg)$/i;
-            
-            if(file)
-            if (!allowedExtensions.exec(filePath)) {
-                alert('Invalid file type');
-                //showMessage(fileInput, "Invalid file type")
-                fileInput.value = '';
-                return false;
-            }else if(fileInput.files[0].size/(1024*1024)>=10){
-                alert('File size must be smaller than 10 mb');
-                //showMessage(fileInput, "File size must be smaller than 10mb")
-                fileInput.value = '';
-                return false;
-            }
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">Upload Logo</label>
+                    <input class="form-control needs-validation" type="file"  name="logo" required>
+                    <div class="invalid-feedback">
+                        Logo is required
+                    </div>
+                </div>
 
-            if (!allowedExtensions.exec(filePath2)) {
-                alert('Invalid file type');
-                //showMessage(fileInput2, "invalid file type");
-                fileInput2.value = '';
-                return false;
-            }else if(fileInput2.files[0].size/(1024*1024)>=10){
-                alert('File size must be smaller than 10 mb');
-                /*showMessage(fileInput2, "File size must be smaller than 10mb");*/
-                fileInput2.value = '';
-                return false;
-            }
-        }
-        function showMessage(input, message){
-            const formControl = input.parentElement;
-            const small = formControl.querySelector('small');
-            small.innerText = message;
 
-            formControl.className = 'form-control error'
-        }
-        function setSuccessFor(input){
-            const formControl = input.parentElement;
-            formControl.className = 'form-control success';
-        }
-        
-    </script>
-           </form>
-        
-         
-    </section>
-    
-    
-    <div class="gradient"></div>
-
-    <form action="/newsletter.php" method="post">
-    <section id="newsletter">
-        <div class="newstext">
-            <h4>Sign Up for our Newsletter and get a <span>FREE</span> Logo GIF</h4>
-            <p>Get E-mail updates on our lastest products and <span>special offers.</span></p>
-            
-        </div>
-        <div class="form">
-            <input type="text" placeholder="Your email address" name="email">
-            <button>Sign Up</button>
-        </div>
-    </section>
-    </form>
-    <div class="gradient"></div>
-    <div class="section-black">
-        <footer>
-            <div class="column">
-            <ul>
-                <li><a href="index.php"><img src="./Assets/suffixLogo.PNG" alt="suffixlogo"></a></li>
-                <li><p><strong>Phone:</strong> +(234) 7068734344</p></li>
-                <li><p><strong>Email:</strong> info@suffixdesigns.co</p></li>
-                <li><p><strong>Address:</strong> 10 East Gardens, Colliers Wood, London, United Kingdom.</p></li>
-            </ul>
-    
-            <div class="follow">
-            <ul>
-            <li><a href="https://www.facebook.com/suffixdesigns"><span class="fa fa-facebook" aria-hidden="true"></span><span class="sr-only">Facabook</span></a></li>
-            <li><a href="https://www.instagram.com/suffix_designs"><span class="fa fa-instagram" aria-hidden="true"></span><span class="sr-only">Instagram</span></a></li>
-            <li><a href="https://wa.me/2348104933232"><span class="fa fa-whatsapp" aria-hidden="true"></span><span class="sr-only">Whatsapp</span></a></li>
-            <li><a href="https://m.me/suffixdesigns"><span class="fab fa-facebook-messenger" aria-hidden="true"></span><span class="sr-only">Messenger</span></a></li>
-            <li><a href="mailto:info@suffixdesigns.co"><span class="fa fa-envelope" aria-hidden="true"></span><span class="sr-only">E-mail</span></a></li>
-            </ul>
-            </div>
-    
-            </div>
-    
-            <div class="column">
-            <div class="about">
-                <h4>Info</h4>
-                <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="privacy.html">Terms & Conditions</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="copyright.html">Copyright</a></li>
-                </ul>
-            </div>
-    
-            </div>
-            <div class="column">
-                <div class="faq">
-                 <h4>Faqs</h4>
-                <ul>
-               
-                <li><a href="faqs.html#turnaround">Turnaround Time</a></li>
-                <li><a href="faqs.html#how-we-work">How we work</a></li>
-                </ul>
+                <div class="col-12">
+                    <textarea name="" id="" cols="40" rows="5" name="instructions'
+                        placeholder="Customize your design. This is optional"></textarea>
                 </div>
             </div>
-            <div class="copyright">
-            <p>© 2021-2022, Suffix Designs</p>
-            </div>
-            <div id="schedule-a-call">
-        <a href="calendly.php">
-            <p><small>Speak with us.</small></p>
-            <span class="fa fa-phone" aria-hidden="true"></span>
-        </a>
-       </div>
-        </footer>
+            <button class="w-100 btn btn-primary btn-lg mt-2" type="submit">Continue to checkout</button>
+        </form>
         </div>
+    </div>
+    </div>
+    </section>
+
+<footer class="py-5 px-3 bg-dark">
+        <div class="row">
+            <div class="col-6 col-md-2 mb-3">
+                <h5 class="text-white">Help</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                </ul>
+            </div>
+
+            <div class="col-6 col-md-2 mb-3">
+                <h5 class="text-white">Faq</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                </ul>
+            </div>
+
+            <div class="col-6 col-md-2 mb-3">
+                <h5 class="text-white">Info</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-5 offset-md-1 mb-3">
+                <form>
+                    <h5 class="text-white">Subscribe to our newsletter</h5>
+                    <p class="text-white">Monthly digest of what's new and exciting from us.</p>
+                    <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                        <label for="newsletter1" class="visually-hidden">Email address</label>
+                        <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+            <p class="text-white">© 2022 Suffix Designs. All rights reserved.</p>
+            <ul class="list-unstyled d-flex">
+                <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                            <use xlink:href="#twitter"></use>
+                        </svg></a></li>
+                <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                            <use xlink:href="#instagram"></use>
+                        </svg></a></li>
+                <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                            <use xlink:href="#facebook"></use>
+                        </svg></a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
+<!-- JavaScript Bundle with Popper -->
 
 </html>
-
 <?php
 
     }//if
 }//while
     $conn->close();
 ?>
-
