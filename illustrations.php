@@ -159,11 +159,11 @@
     </nav>
    
 <section class="products">
-<div class="container text-center my-5">
+<div class="container text-center my-5 justify-content-center">
 <h4 class="display-5 fw-bold mt-5">Illustrations</h4>
 <div class="row my-5">
 <?php foreach($products as $product){ ?>
-<div class="col-lg-4">
+<div class="col-lg-4 py-3">
 <div class="card" style="width: 18rem;">
   <img src="<?php echo $product['product_img'];?>" class="card-img-top" alt="...">
   <div class="card-body">
