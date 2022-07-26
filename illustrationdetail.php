@@ -25,9 +25,9 @@
     }else{
         while($product = $result->fetch_assoc()){
             
-   
-           
-        
+    echo '<br>';
+    print_r($product['stripe_id']);
+    echo '<br>'   
 ?>
 
 
@@ -56,10 +56,10 @@
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
     </script>
+    <script src="form-validation.js" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
     <script src="./script.js" defer></script>
     <script src="https://kit.fontawesome.com/9c58ab43d1.js" crossorigin="anonymous"></script>
@@ -144,43 +144,56 @@
             </div>
         </div>
     </nav>
-<div class="row g-5 px-5" >
-    <div class="col-md-5 col-lg-4 order-md-last">
-      <h4 class="d-flex justify-content-between align-items-center mb-3">
-        <span class="text-primary"><?php echo $product['product_name']; ?></span>
-        <span class="badge bg-primary rounded-pill">USD <?php echo $product['product_price']?></span>
-      </h4>
-      <div class="container">
-        <img src="<?php echo $product['product_img'];?>" alt="product-image" width="400" height="400">
-      </div>
-    </div>
-    <div class="col-md-7 col-lg-8">
-    <div class="row gy-3">
-     <form action="" class="needs-validation">
-          <div class="col-md-6">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="" required="">
-            <div class="invalid-feedback">
-              Email is required
-            </div>
-          </div>
+    <section id="detail">
+    <div class="container my-5">
+    <div class="row g-5 px-5 py-5 mb-5">
+        <div class="col-md-5 col-lg-4 order-md-last py-5">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <?php echo $product['product_name']; ?>
+            </h4>
+            <h5>USD <?php echo $product['product_price']; ?></h5>
+            <img src="<?php echo $product['product_img'];?>" alt="" width="250" height="250">
+            <p><?php echo $product['product_description']?></p>
+        </div>
+        <div class="col-md-7 col-lg-8 py-5">
+            <form action="orderupload.php?product=<?php echo $product['stripe_id']?>" class="needs-validation" novalidate>
+            <div class="row gy-3">
+                <div class="col-12">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control needs-validation" id="email" placeholder="" required="">
+                    <div class="invalid-feedback">
+                        Email is required
+                    </div>
+                </div>
 
-          <div class="col-md-6">
-            <label for="email" class="form-label">Confirm Email</label>
-            <input type="email" class="form-control" id="email" placeholder="" required="">
-            <div class="invalid-feedback">
-              Confirm your email
-            </div>
-          </div>
-          <div class="col-md-3">
-            <label for="instructions" class="form-label">Instructions</label>
-            <textarea name="instructions" id="" cols="60" rows="5"></textarea>
-            </div>
-            <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
-      </form>
-    </div>
-</div>
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">Upload Headshot</label>
+                    <input class="form-control needs-validation" type="file" id="formFile" name="headshot" required>
+                    <div class="invalid-feedback">
+                        Headshot is required
+                    </div>
+                </div>
 
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">Upload Logo</label>
+                    <input class="form-control needs-validation" type="file"  name="logo" required>
+                    <div class="invalid-feedback">
+                        Logo is required
+                    </div>
+                </div>
+
+
+                <div class="col-12">
+                    <textarea name="" id="" cols="40" rows="5" name="instructions'
+                        placeholder="Customize your design. This is optional"></textarea>
+                </div>
+            </div>
+            <button class="w-100 btn btn-primary btn-lg mt-2" type="submit">Continue to checkout</button>
+        </form>
+        </div>
+    </div>
+    </div>
+    </section>
 
 <footer class="py-5 px-3 bg-dark">
         <div class="row">
@@ -246,6 +259,8 @@
         </div>
     </footer>
 </body>
+<!-- JavaScript Bundle with Popper -->
+
 </html>
 <?php
 
