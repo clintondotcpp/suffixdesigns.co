@@ -21,7 +21,6 @@
     <tr>
       <th scope="col">ID</th>
       <th scope="col">Email</th>
-      <th scope="col">Confirm Email</th>
       <th scope="col">Headshot</th>
       <th scope="col">Logo</th>
       <th scope="col">Instructions</th>
@@ -40,7 +39,6 @@
     while($row = mysqli_fetch_assoc($result)){
     $id=$row['order_id'];
     $email = $row['email'];
-    $confirmEmail = $row['confirm_email'];
     $headshot = $row['headshot'];
     $logo = $row['logo'];
     $instructions = $row['instructions'];
@@ -49,7 +47,6 @@
     echo '<tr>
       <td>'.$id.'</td>
       <td>'.$email.'</td>
-      <td>'.$confirmEmail.'</td>
       <td><img src='.$headshot.'></td>
       <td><img src='.$logo.'></td>
       <td>'.$instructions.'</td>
