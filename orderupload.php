@@ -60,7 +60,7 @@
          }  
         }
 
-       // header('Location: create-checkout-session.php?product='.$product);
+       header('Location: create-checkout-session.php?product='.$product);
     }
 
 

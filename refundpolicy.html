@@ -1,3 +1,4 @@
+<!--<link rel="stylesheet" href="./css/index.css?v=<?php echo time(); ?>">-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,8 +17,14 @@
     </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Refund Policy</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+    <script src="./script.js" defer></script>
+    <script src="https://kit.fontawesome.com/9c58ab43d1.js" crossorigin="anonymous"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
     <script src="https://js.stripe.com/v3/"></script>
     <!-- Meta Pixel Code -->
@@ -49,120 +56,160 @@
 </head>
 
 <body>
-    <nav>
-        <span id="suffixlogo"><a href="./index.php"><img src="./Assets/suffixLogo.PNG"></a></span>
-        <ul id="navbar">
-            <li><a href="illustrations.php">Illustrations</a></li>
-            <li><a href="gifs.php">Cartoon GIFs</a></li>
-            <li><a href="photogif.php">Photo GIFs</a></li>
-            <li><a href="logogif.php">Logo GIFs</a></li>
-            <li><a href="Logos.php">Logos</a></li>
-            <li><a href="fliers.php">Fliers</a></li>
-            <a href="#" id="close"><span class="fa fa-times"></span></a>
-        </ul>
-        <div id="mobile">
-            <span id="bar" class="fa fa-bars" style="font-size:36px"></span>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.php"><img src="./Assets/suffixlogo.PNG" alt="" width="100"
+                    height="100"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.php">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Custom Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.php">Blog</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="illustrations.php">Illustrations</a></li>
+                            <li><a class="dropdown-item" href="gifs.php">Cartoon GIFs</a></li>
+                            <li><a class="dropdown-item" href="logos.php">Logos</a></li>
+                            <li><a class="dropdown-item" href="fliers.php">Fliers</a></li>
+                            <li><a class="dropdown-item" href="logogif.php">Logo GIFs</a></li>
+                            <li><a class="dropdown-item" href="photogif.php">Photo GIFs</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="calendly.php">Schedule a call</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <!--<form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>-->
+            </div>
         </div>
     </nav>
-    <div class="gradient"></div>
-    <section id="thankyou">
-        <p>
-            Thank you for your order! We will contact you within 24 hours to confirm your order and ask you questions if
-            we
-            have any.
-        </p>
-        <p>Your design will be ready within 10-14 days and sent to you via email.
-            If you have any questions, please
-            <a href="mailto:info@suffixdesigns.co">email us</a>.
-        </p>
-    </section>
-    <form action="/newsletter.php" method="post">
-        <section id="newsletter">
-            <div class="newstext">
-                <h4>Sign Up for our Newsletter and get a <span>FREE</span> Logo GIF</h4>
-                <p>Get E-mail updates on our lastest products and <span>special offers.</span></p>
 
-            </div>
-            <div class="form">
-                <input type="text" placeholder="Your email address" name="email">
-                <button>Sign Up</button>
-            </div>
-        </section>
-    </form>
-    <div class="gradient"></div>
-    <div class="section-black">
-        <footer>
-            <div class="column">
-                <ul>
-                    <li><a href="index.php"><img src="./Assets/suffixLogo.PNG" alt="suffixlogo"></a></li>
-                    <li>
-                        <p><strong>Phone:</strong> +(234) 7068734344</p>
+    <div class="container py-5 my-5">
+        <div class="row pb-4 mt-5" id="returnpolicy">
+            <h4>Return and Exchange Policy</h4>
+            <p>We do NOT accept returns on our orders. However, we do so in some cases. If you don't like your designs
+                due to an error on our part, you can exchange for a new design upon confirmation. Kindly note that your
+                modificattion can NOT be a new design as this will be processed as a new design order. </p>
+        </div>
+
+    </div>
+
+
+
+    <div class="container">
+        <a href="calendly.php" class="btn btn-primary btn-lg active" role="button" aria-pressed="true"
+            style="right: 20px; position: fixed; z-index: 100; bottom: 20px"><svg xmlns="http://www.w3.org/2000/svg"
+                width="16" height="16" fill="currentColor" class="bi bi-telephone-inbound-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM15.854.146a.5.5 0 0 1 0 .708L11.707 5H14.5a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 1 0v2.793L15.146.146a.5.5 0 0 1 .708 0z" />
+            </svg></a>
+    </div>
+    <footer class="py-5 px-3 bg-dark">
+        <div class="row">
+            <div class="col-6 col-md-2 mb-3">
+                <h5 class="text-white">Help</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="contact.html" class="nav-link p-0 text-muted">Contact Us</a></li>
+                    <li class="nav-item mb-2"><a href="calendly.php" class="nav-link p-0 text-muted">Schedule a call</a>
                     </li>
-                    <li>
-                        <p><strong>Email:</strong> info@suffixdesigns.co</p>
-                    </li>
-                    <li>
-                        <p><strong>Address:</strong> 10 East Gardens, Colliers Wood, London, United Kingdom.</p>
+                    <li class="nav-item mb-2"><a href="contact.html" class="nav-link p-0 text-muted">Custom Order</a>
                     </li>
                 </ul>
+            </div>
 
-                <div class="follow">
-                    <ul>
-                        <li><a href="https://www.facebook.com/suffixdesigns"><span class="fa fa-facebook"
-                                    aria-hidden="true"></span><span class="sr-only">Facabook</span></a></li>
-                        <li><a href="https://www.instagram.com/suffix_designs"><span class="fa fa-instagram"
-                                    aria-hidden="true"></span><span class="sr-only">Instagram</span></a></li>
-                        <li><a href="https://wa.me/2348104933232"><span class="fa fa-whatsapp"
-                                    aria-hidden="true"></span><span class="sr-only">Whatsapp</span></a></li>
-                        <li><a href="https://m.me/suffixdesigns"><span class="fab fa-facebook-messenger"
-                                    aria-hidden="true"></span><span class="sr-only">Messenger</span></a></li>
-                        <li><a href="mailto:info@suffixdesigns.co"><span class="fa fa-envelope"
-                                    aria-hidden="true"></span><span class="sr-only">E-mail</span></a></li>
-                    </ul>
+            <div class="col-6 col-md-2 mb-3">
+                <h5 class="text-white">Faq</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="faqs.html" class="nav-link p-0 text-muted">Turnaround Time</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="faqs.html" class="nav-link p-0 text-muted">How to Order</a></li>
+                    <li class="nav-item mb-2"><a href="refundpolicy.html" class="nav-link p-0 text-muted">Refund
+                            Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="col-6 col-md-2 mb-3">
+                <h5 class="text-white">Info</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="about.html" class="nav-link p-0 text-muted">About Us</a></li>
+                    <li class="nav-item mb-2"><a href="privacy.html" class="nav-link p-0 text-muted">Terms and Privacy
+                            Policy</a></li>
+                    <li class="nav-item mb-2"><a href="copyright.html" class="nav-link p-0 text-muted">Copyright</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="col-md-5 offset-md-1 mb-3">
+                <form method="post" action="newsletter.php"></form>
+                <h5 class="text-white">Subscribe to our newsletter</h5>
+                <p class="text-white">Monthly digest of what's new and exciting from us.</p>
+                <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                    <label for="newsletter1" class="visually-hidden">Email address</label>
+                    <input id="newsletter1" type="text" class="form-control" placeholder="Email address" name="email"
+                        required>
+                    <button class="btn btn-primary" type="submit" name="submit">Subscribe</button>
                 </div>
+                </form>
+            </div>
+        </div>
 
-            </div>
-
-            <div class="column">
-                <div class="about">
-                    <h4>Info</h4>
-                    <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="privacy.html">Terms & Conditions</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="copyright.html">Copyright</a></li>
-                    </ul>
-                </div>
-
-            </div>
-            <div class="column">
-                <div class="faq">
-                    <h4>Faqs</h4>
-                    <ul>
-
-                        <li><a href="faqs.html#turnaround">Turnaround Time</a></li>
-                        <li><a href="faqs.html#how-we-work">How we work</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>© 2021-2022, Suffix Designs</p>
-            </div>
-            <div id="schedule-a-call">
-                <a href="calendly.php">
-                    <p><small>Speak with us.</small></p>
-                    <span class="fa fa-phone" aria-hidden="true"></span>
-                </a>
-            </div>
-        </footer>
+        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+            <p class="text-white">© 2022 Suffix Designs. All rights reserved.</p>
+            <ul class="list-unstyled d-flex">
+                <li class="ms-3"><a class="link-light" href="http://wa.me/2348104933232"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-whatsapp" viewBox="0 0 16 16">
+                            <path
+                                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+                        </svg></a></li>
+                <li class="ms-3"><a class="link-light" href="http://www.instagram.com/suffix_designs"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-instagram" viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                        </svg></a></li>
+                <li class="ms-3"><a class="link-light" href="http://www.m.me/suffixdesigns"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-messenger" viewBox="0 0 16 16">
+                            <path
+                                d="M0 7.76C0 3.301 3.493 0 8 0s8 3.301 8 7.76-3.493 7.76-8 7.76c-.81 0-1.586-.107-2.316-.307a.639.639 0 0 0-.427.03l-1.588.702a.64.64 0 0 1-.898-.566l-.044-1.423a.639.639 0 0 0-.215-.456C.956 12.108 0 10.092 0 7.76zm5.546-1.459-2.35 3.728c-.225.358.214.761.551.506l2.525-1.916a.48.48 0 0 1 .578-.002l1.869 1.402a1.2 1.2 0 0 0 1.735-.32l2.35-3.728c.226-.358-.214-.761-.551-.506L9.728 7.381a.48.48 0 0 1-.578.002L7.281 5.98a1.2 1.2 0 0 0-1.735.32z" />
+                        </svg></a></li>
+                <li class="ms-3"><a class="link-light" href="http://www.facebook.com/suffixdesigns"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-facebook" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                        </svg></a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
-
-
-
-<div class="container">
-    <a href="calendly.php" class="btn btn-primary btn-lg active" role="button" aria-pressed="true"
-        style="right: 20px; position: fixed; z-index: 100; bottom: 20px">Schedule a call</a>
-</div>

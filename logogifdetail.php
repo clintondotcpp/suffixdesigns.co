@@ -50,7 +50,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suffix Designs: Illustrations, Logos, GIFs and Fliers</title>
+    <title>Logo GIF detail</title>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
@@ -130,7 +130,7 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Schedule a call</a></li>
+                            <li><a class="dropdown-item" href="calendly.php">Schedule a call</a></li>
                         </ul>
                     </li>
 
@@ -166,10 +166,10 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="formFile" class="form-label">Upload Headshot</label>
+                    <label for="formFile" class="form-label">Upload Logo</label>
                     <input class="form-control needs-validation" type="file" id="formFile" name="headshot" required>
                     <div class="invalid-feedback">
-                        Headshot is required
+                        Logo is required
                     </div>
                 </div>
 
@@ -177,14 +177,14 @@
                     <label for="formFile" class="form-label">Upload Logo</label>
                     <input class="form-control needs-validation" type="file"  name="logo" required>
                     <div class="invalid-feedback">
-                        Logo is required
+                        Another logo is required
                     </div>
                 </div>
 
 
                 <div class="col-12">
                     <textarea id="" cols="30" rows="5" name="instructions"
-                        placeholder="Customize your design. This is optional"></textarea>
+                        placeholder="Customize your design. This is optional. We will contact you regardless via email within 24hrs to ask for more details or pictures for optimal satisfaction."></textarea>
                 </div>
             </div>
             <button class="w-100 btn btn-primary btn-lg mt-2" type="submit" name="submit" value="submit">Continue to checkout</button>

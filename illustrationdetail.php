@@ -50,7 +50,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suffix Designs: Illustrations, Logos, GIFs and Fliers</title>
+    <title>Illustrations detail</title>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
@@ -121,8 +121,8 @@
                             Categories
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="illustrationdetail.php">Illustrations</a></li>
-                            <li><a class="dropdown-item" href="gifs.html">Cartoon GIFs</a></li>
+                            <li><a class="dropdown-item" href="illustrations.php">Illustrations</a></li>
+                            <li><a class="dropdown-item" href="gifs.php">Cartoon GIFs</a></li>
                             <li><a class="dropdown-item" href="logos.php">Logos</a></li>
                             <li><a class="dropdown-item" href="fliers.php">Fliers</a></li>
                             <li><a class="dropdown-item" href="logogif.php">Logo GIFs</a></li>
@@ -188,7 +188,7 @@
 
                 <div class="col-12">
                     <textarea name="instructions" id="" cols="30" rows="5" name="instructions"
-                        placeholder="Customize your design. This is optional"></textarea>
+                        placeholder="Customize your design. This is optional. We will contact you regardless via email within 24hrs to ask for more details or pictures for optimal satisfaction."></textarea>
                 </div>
             </div>
             <button class="w-100 btn btn-primary btn-lg mt-2" name="submit" type="submit" value="submit">Continue to checkout</button>
