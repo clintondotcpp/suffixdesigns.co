@@ -121,8 +121,8 @@
                             Categories
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="illustrationdetail.php">Illustrations</a></li>
-                            <li><a class="dropdown-item" href="gifs.html">Cartoon GIFs</a></li>
+                            <li><a class="dropdown-item" href="illustrations.php">Illustrations</a></li>
+                            <li><a class="dropdown-item" href="gifs.php">Cartoon GIFs</a></li>
                             <li><a class="dropdown-item" href="logos.php">Logos</a></li>
                             <li><a class="dropdown-item" href="fliers.php">Fliers</a></li>
                             <li><a class="dropdown-item" href="logogif.php">Logo GIFs</a></li>
@@ -145,7 +145,7 @@
 
     <section id="detail">
     <div class="container my-5">
-    <div class="row g-5 px-5 py-5 mb-5">
+    <div class="row g-5 py-5 mb-5">
         <div class="col-md-5 col-lg-4 order-md-last py-5">
             <h4 class="d-flex justify-content-between align-items-center mb-3">
             <?php echo $product['product_name']; ?>
@@ -183,7 +183,7 @@
 
 
                 <div class="col-12">
-                    <textarea id="" cols="40" rows="5" name="instructions" name="instructions"
+                    <textarea id="" cols="30" rows="5" name="instructions" name="instructions"
                         placeholder="Customize your design. This is optional"></textarea>
                 </div>
             </div>

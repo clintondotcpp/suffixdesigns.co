@@ -77,8 +77,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suffix Designs: Illustrations, Logos, GIFs and Fliers</title>
-     <!-- CSS only -->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
@@ -160,13 +160,12 @@
     </nav>
 
 
-<section class="products">
-<div class="container text-center my-5 justify-content-center">
-<h4 class="display-5 fw-bold mt-5">Illustrations</h4>
-<div class="row my-5">
+
+<section class="py-5 my-5">
+<div class="row row-cols-1 row-cols-md-3 g-4 mx-5 py-5">
 <?php foreach($products as $product){ ?>
-<div class="col-lg-4 py-3 g-5 sm-px-auto">
-<div class="card" style="width: 18rem;">
+<div class="col">
+<div class="card">
   <img src="<?php echo $product['product_img'];?>" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title"><?php echo htmlspecialchars($product['product_name']);?></h5>
@@ -175,7 +174,6 @@
 </div>
 </div>
 <?php }?>
-</div>
 </div>
 </section>
 

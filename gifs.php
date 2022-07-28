@@ -137,7 +137,7 @@
                             Categories
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="illustrationdetail.php">Illustrations</a></li>
+                            <li><a class="dropdown-item" href="illustrations.php">Illustrations</a></li>
                             <li><a class="dropdown-item" href="gifs.php">Cartoon GIFs</a></li>
                             <li><a class="dropdown-item" href="logos.php">Logos</a></li>
                             <li><a class="dropdown-item" href="fliers.php">Fliers</a></li>
@@ -160,13 +160,11 @@
     </nav>
 
    
-    <section class="products">
-<div class="container text-center my-5">
-<h4 class="display-5 fw-bold mt-5">Illustrations</h4>
-<div class="row my-5">
+<section id="products" class="py-5 my-5">
+<div class="row row-cols-1 row-cols-md-3 g-4 mx-5 py-5">
 <?php foreach($products as $product){ ?>
-<div class="col-lg-4 py-3">
-<div class="card" style="width: 18rem;">
+<div class="col">
+<div class="card">
 <video src="<?php echo $product['product_video'];?>" autoplay loop muted></video>
   <div class="card-body">
     <h5 class="card-title"><?php echo htmlspecialchars($product['product_name']);?></h5>
@@ -175,7 +173,6 @@
 </div>
 </div>
 <?php }?>
-</div>
 </div>
 </section>
     

@@ -104,19 +104,19 @@
    <div class="px-4 py-5 my-5 text-center">
     <h1 class="display-5 fw-bold mt-5">Custom Illustrations, Logos, Animations, commercial designs and websites</h1>
     <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4">Digital design studio operating from the United Kingdom. We create custom illustrations, logos, art portraits, animations/GIFs, commercial designs and websites for individuals, professionals and businesses globally. Connect with us by scheduling a call or emailing.</p>
+      <p class="lead mb-4">Digital design studio operating from the United Kingdom. We create custom illustrations, logos, art portraits, animations/GIFs, commercial designs and websites for individuals, professionals and businesses globally. Connect with us via Email or schedule a call.</p>
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-        <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Schedule a call</button>
-        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Custom order</button>
+      <a href="calendly.php" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Schedule a call</a>
+      <a href="contact.html"  class="btn btn-outline-secondary btn-lg px-4" role="button" aria-pressed="true">Custom order</a>
       </div>
     </div>
   </div>
    </section>
-    <section id="categories" class="px-4">
-    <div class="container text-center my-5">
-        <div class="row g-5 px-auto">
-            <div class="col-md px-auto">
-                <div class="card" style="width: 18rem;">
+  
+<section id="categories" class="p-5"> 
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card">
                     <img src="./img/Template 021.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Illustrations</h5>
@@ -125,8 +125,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md px-auto">
-                <div class="card" style="width: 18rem;">
+            <div class="col">
+                <div class="card">
                     <video src="GIF/Template 003.MP4" autoplay loop muted></video>
                     <div class="card-body">
                         <h5 class="card-title">Cartoon GIFs</h5>
@@ -135,8 +135,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md pb-5 px-auto">
-                <div class="card" style="width: 18rem;">
+            <div class="col">
+                <div class="card">
                     <img src="LOGO/Template 001.PNG" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Logos</h5>
@@ -145,10 +145,10 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row g-5 px-auto">
-            <div class="col-md px-auto">
-                <div class="card" style="width: 18rem;">
+      
+  
+            <div class="col">
+                <div class="card">
                     <img src="FLIERS/Template 001.JPG" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Fliers</h5>
@@ -157,8 +157,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md px-auto">
-                <div class="card" style="width: 18rem;">
+
+            <div class="col">
+                <div class="card">
                 <video src="LOGOGIF/Template 001.MP4" autoplay loop muted></video>
                     <div class="card-body">
                         <h5 class="card-title">Logo GIFs</h5>
@@ -167,8 +168,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md px-auto">
-                <div class="card" style="width: 18rem;">
+            <div class="col">
+                <div class="card">
                 <video src="PHOTOGIF/Template 001.MP4" autoplay loop muted></video>
                     <div class="card-body">
                         <h5 class="card-title">Photo GIFs</h5>
@@ -178,10 +179,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    </section>
-
-
+  </section>
+    
     
 <section id="clients">
 <div class="container text-center mb-4">

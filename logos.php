@@ -160,13 +160,12 @@
     </nav>
 
    
-<section class="products">
-<div class="container text-center my-5">
-<h4 class="display-5 fw-bold mt-5">Illustrations</h4>
-<div class="row my-5">
+
+    <section class="py-5 my-5">
+<div class="row row-cols-1 row-cols-md-3 g-4 mx-5 py-5">
 <?php foreach($products as $product){ ?>
-<div class="col-lg-4 ">
-<div class="card" style="width: 18rem;">
+<div class="col">
+<div class="card">
   <img src="<?php echo $product['product_img'];?>" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title"><?php echo htmlspecialchars($product['product_name']);?></h5>
@@ -176,9 +175,8 @@
 </div>
 <?php }?>
 </div>
-</div>
 </section>
-    
+
 <div class="container">
 <a href="calendly.php" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" style="right: 20px; position: fixed; z-index: 100; bottom: 20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-inbound-fill" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM15.854.146a.5.5 0 0 1 0 .708L11.707 5H14.5a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 1 0v2.793L15.146.146a.5.5 0 0 1 .708 0z"/>

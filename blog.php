@@ -78,7 +78,7 @@
                             Categories
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="illustrationdetail.php">Illustrations</a></li>
+                            <li><a class="dropdown-item" href="illustrations.php">Illustrations</a></li>
                             <li><a class="dropdown-item" href="gifs.php">Cartoon GIFs</a></li>
                             <li><a class="dropdown-item" href="logos.php">Logos</a></li>
                             <li><a class="dropdown-item" href="fliers.php">Fliers</a></li>
@@ -87,7 +87,7 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Schedule a call</a></li>
+                            <li><a class="dropdown-item" href="calendly.php">Schedule a call</a></li>
                         </ul>
                     </li>
 

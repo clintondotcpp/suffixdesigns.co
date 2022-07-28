@@ -146,7 +146,7 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Schedule a call</a></li>
+                            <li><a class="dropdown-item" href="calendly.php">Schedule a call</a></li>
                         </ul>
                     </li>
 
@@ -159,13 +159,11 @@
         </div>
     </nav>
 
-    <section class="products">
-<div class="container text-center my-5">
-<h4 class="display-5 fw-bold mt-5">Illustrations</h4>
-<div class="row my-5">
+<section id="products" class="py-5 my-5">
+<div class="row row-cols-1 row-cols-md-3 g-4 mx-5 py-5">
 <?php foreach($products as $product){ ?>
-<div class="col-lg-4">
-<div class="card" style="width: 18rem;">
+<div class="col">
+<div class="card">
 <video src="<?php echo $product['product_video'];?>" autoplay loop muted></video>
   <div class="card-body">
     <h5 class="card-title"><?php echo htmlspecialchars($product['product_name']);?></h5>
@@ -175,9 +173,8 @@
 </div>
 <?php }?>
 </div>
-</div>
 </section>
-    
+
 <div class="container py-5">
   <h4>Don't see what you like? Make a custom request by Emailing or scheduling a call</h4>
 <a href="mailto:info@suffixdesigns.co" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Email us</a>
