@@ -1,5 +1,5 @@
 <?php
-    require_once('lib/pdo_db.php');
+    
 
     
     $id = $_GET['product'];
@@ -8,7 +8,7 @@
     }
 /*`product_id`, `product_name`, `product_img`, `product_price`, `product_description`, */
     try{
-        $conn = new mysqli('localhost', 'Kurinton', '@@90210@@', 'logos');
+        $conn = new mysqli('localhost', 'roosevi0_Kurinton', '@@90210@@', 'roosevi0_logos');
         if($conn->connect_error){
             $error = $conn->connect_error;
         }
@@ -50,7 +50,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logo detail</title>
+    <title>Logo Template</title>
+    <link rel="shortcut icon" type="image/jpg" href="Assets/favicon.jpg">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
@@ -58,8 +59,6 @@
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
     </script>
     <script src="form-validation.js" defer></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
-    <script src="./script.js" defer></script>
     <script src="https://kit.fontawesome.com/9c58ab43d1.js" crossorigin="anonymous"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
     <script src="https://js.stripe.com/v3/"></script>
@@ -159,7 +158,7 @@
             <p><?php echo $product['product_description']?></p>
         </div>
         <div class="col-md-7 col-lg-8 py-5">
-        <form method="post" action="./orderupload.php?product=<?php echo $product['stripe_id'];?>" enctype="multipart/form-data" class="needs-validation" novalidate>
+        <form method="post" action="orderupload.php?product=<?php echo $product['stripe_id'];?>" enctype="multipart/form-data" class="needs-validation" novalidate>
             <div class="row gy-3">
                 <div class="col-12">
                     <label for="email" class="form-label">Email</label>
@@ -171,7 +170,7 @@
 
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Upload a picture</label>
-                    <input class="form-control needs-validation" type="file" id="formFile" name="headshot">
+                    <input class="form-control needs-validation" type="file" id="formFile" name="headshot" required>
                     <div class="invalid-feedback">
                         Headshot is required
                     </div>
@@ -179,7 +178,7 @@
 
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Upload a picture</label>
-                    <input class="form-control needs-validation" type="file"  name="logo">
+                    <input class="form-control needs-validation" type="file"  name="logo" required>
                     <div class="invalid-feedback">
                         Logo is required
                     </div>

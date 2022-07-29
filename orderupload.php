@@ -6,7 +6,7 @@
 
     $product = $_GET['product'];
     
-    $conn = new mysqli("localhost", "Kurinton", "@@90210@@", "orders");
+    $conn = new mysqli("localhost", "roosevi0_Kurinton", "@@90210@@", "roosevi0_orders");
     if($conn->connect_error){
         die('Connectin Failed: '.$conn->connect_error);
         exit();
@@ -53,19 +53,19 @@
             $sql = "insert into `order_list` (email, headshot, logo, instructions) values ('$email', '$upload_headshot', '$upload_logo', '$instructions')";
             $result = mysqli_query($conn, $sql);
             if($result){
-                echo "Data inserted successfully";
+                header('Location: create-checkout-session.php?product='.$product);
             }else{
                 echo "Error uploading";
             }
          }  
         }
 
-       header('Location: create-checkout-session.php?product='.$product);
+       
     }
 
 
    
-
+    
  
 
 

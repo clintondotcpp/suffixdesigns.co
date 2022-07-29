@@ -18,6 +18,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suffix Designs: Illustrations, Logos, Animated stickers, GIFs, Fliers, Websites and commercial designs</title>
+    <link rel="shortcut icon" type="image/jpg" href="Assets/favicon.jpg">
      <!-- CSS only -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
@@ -25,7 +26,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
     <script src="./script.js" defer></script>
     <script src="https://kit.fontawesome.com/9c58ab43d1.js" crossorigin="anonymous"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
@@ -51,7 +51,7 @@
 <body>
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="./index.php"><img src="./Assets/suffixlogo.PNG" alt="" width="100" height="100"></a>
+            <a class="navbar-brand" href="index.php"><img src="Assets/suffixlogo.PNG" alt="" width="100" height="100"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -117,7 +117,7 @@
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col">
                 <div class="card">
-                    <img src="./img/Template 021.png" class="card-img-top" alt="...">
+                    <img src="img/Template 021.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Illustrations</h5>
                         <p class="card-text">USD 150</p>
@@ -127,7 +127,15 @@
             </div>
             <div class="col">
                 <div class="card">
-                    <video src="GIF/Template 003.MP4" autoplay loop muted></video>
+                    <video autoplay loop muted>
+                      <source src="GIF/Template 003.mp4"
+                 type="video/mp4">
+
+                <source src="GIF/Template 003.ogg"
+                type="video/ogg">
+
+              Sorry, your browser doesn't support embedded videos.
+                    </video>
                     <div class="card-body">
                         <h5 class="card-title">Cartoon GIFs</h5>
                         <p class="card-text">USD 300</p>
@@ -149,7 +157,7 @@
   
             <div class="col">
                 <div class="card">
-                    <img src="FLIERS/Template 001.JPG" class="card-img-top" alt="...">
+                    <img src="FLIERS/Template 001.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Fliers</h5>
                         <p class="card-text">USD 100</p>
@@ -160,7 +168,15 @@
 
             <div class="col">
                 <div class="card">
-                <video src="LOGOGIF/Template 001.MP4" autoplay loop muted></video>
+                <video autoplay loop muted>
+                      <source src="LOGOGIF/Template 001.mp4"
+                 type="video/mp4">
+
+                <source src="LOGOGIF/Template 001.ogg"
+                type="video/ogg">
+
+              Sorry, your browser doesn't support embedded videos.
+                    </video>
                     <div class="card-body">
                         <h5 class="card-title">Logo GIFs</h5>
                         <p class="card-text">USD 50</p>
@@ -170,7 +186,15 @@
             </div>
             <div class="col">
                 <div class="card">
-                <video src="PHOTOGIF/Template 001.MP4" autoplay loop muted></video>
+                <video autoplay loop muted>
+                      <source src="PHOTOGIF/Template 001.mp4"
+                 type="video/mp4">
+
+                <source src="PHOTOGIF/Template 001.ogg"
+                type="video/ogg">
+
+              Sorry, your browser doesn't support embedded videos.
+                    </video>
                     <div class="card-body">
                         <h5 class="card-title">Photo GIFs</h5>
                         <p class="card-text">USD 50</p>
@@ -187,7 +211,7 @@
 <p class="fw-bold">Our clients</p>
 <div class="col-md-12 text-left">
 <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border"
-    src="Assets/Reviews/client1.JPG" alt="Image Description" width="75" height="75">
+    src="Assets/Reviews/client1.jpg" alt="Image Description" width="75" height="75">
 <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border"
     src="Assets/Reviews/client2.jpg" alt="Image Description" width="75" height="75">
 <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border"
