@@ -5,3 +5,55 @@ price_1LMwVuGvSc684TudMiCiUnPY,prod_M56jZQ9kfGShhq,Illustrations- Template 4,,tx
 price_1LMwVPGvSc684TudUlFDwJ9K,prod_M56iBb7u9A9Fr9,Illustrations- Template 3,,txcd_20030000,,2022-07-18 16:09,15000,usd,,,,,per_unit,,inclusive
 price_1LMwUJGvSc684TudfGwoZdjj,prod_M56hgu8MguNCQo,Illustrations- Template 2,,txcd_20030000,,2022-07-18 16:08,15000,usd,,,,,per_unit,,inclusive
 price_1LMwTKGvSc684TudygTZetyq,prod_M56gm1Qg6vX42g,Illustrations- Template 1,,txcd_20030000,,2022-07-18 16:07,15000,usd,,,,,per_unit,,inclusive
+
+
+
+
+
+
+
+
+
+cwebp -q 20 "Template 074.png" -o "Template 074.webp"
+cwebp -q 20 "Template 021.png" -o "Template 021.webp"
+cwebp -q 20 "Template 081.png" -o "Template 081.webp"
+cwebp -q 20 "Template 082.png" -o "Template 082.webp"
+cwebp -q 20 "Template 083.png" -o "Template 083.webp"
+
+
+<?php
+    /*This works with my email nnamdichukwunyere@yahoo.com */
+    require_once('vendor/autoload.php');
+
+    
+    if($_POST){
+        $email = $_POST['email'];
+    
+    $list_id = 'cd829a4558';
+
+    $client = new MailchimpMarketing\ApiClient();
+    $client->setConfig([
+    'apiKey' => 'a830a7a594f24814b47669e20adaeeea',
+    'server' => 'us12',
+    ]);
+
+    $response = $client->lists->batchListMembers("$list_id", ["members" => [[
+        'email' => $email,
+        'status' => "subscribed", "unsubscribed",
+    ]]]);
+    print_r($response);
+
+
+    
+    if($MailChimp->success()){
+        header('Location: emailsuccess.html');
+    }else{
+        header('Location: emailfail.html');
+    }
+
+    /*$Mailchimp->getLastError()*/  
+
+
+
+    }
+?>
