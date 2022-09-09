@@ -8,7 +8,7 @@ if (filter_var($id, FILTER_VALIDATE_INT) === false) {
 }
 /*`product_id`, `product_name`, `product_img`, `product_price`, `product_description`, */
 try {
-    $conn = new mysqli('localhost', 'Kurinton', '@@90210@@', 'fliers');
+    $conn = new mysqli('localhost', 'roosevi0_Kurinton', '@@90210@@', 'roosevi0_logos');
     if ($conn->connect_error) {
         $error = $conn->connect_error;
     }
@@ -49,14 +49,13 @@ if (!$rows) {
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Flier Template</title>
+            <title>Logo Template</title>
             <link rel="shortcut icon" type="image/jpg" href="Assets/favicon.jpg">
             <!-- CSS only -->
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
             </script>
             <script src="form-validation.js" defer></script>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
             <script src="https://kit.fontawesome.com/9c58ab43d1.js" crossorigin="anonymous"></script>
             <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
             <script src="https://js.stripe.com/v3/"></script>
@@ -139,7 +138,6 @@ if (!$rows) {
                         <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM15.854.146a.5.5 0 0 1 0 .708L11.707 5H14.5a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 1 0v2.793L15.146.146a.5.5 0 0 1 .708 0z" />
                     </svg></a>
             </div>
-
             <section id="detail">
                 <div class="container my-5">
                     <div class="row g-5 py-5 mb-5">
@@ -151,12 +149,12 @@ if (!$rows) {
                             <img src="<?php echo $product['product_img']; ?>" alt="" width="250" height="250">
                             <p><?php echo $product['product_description'] ?></p>
                         </div>
-                        <div class="col-md-7 col-lg-8 py-5 md-py-2 sm-py-2">
-                            <form action="orderupload.php?product=<?php echo $product['stripe_id'] ?>" class="needs-validation" method="post" enctype="multipart/form-data" novalidate>
+                        <div class="col-md-7 col-lg-8 py-5">
+                            <form method="post" action="orderupload.php?product=<?php echo $product['stripe_id']; ?>" enctype="multipart/form-data" class="needs-validation" novalidate>
                                 <div class="row gy-3">
                                     <div class="col-12">
                                         <label for="email" class="form-label">Email</label>
-                                        <input type="email" class="form-control needs-validation" id="email" placeholder="" name="email" required>
+                                        <input type="email" class="form-control needs-validation" name="email" id="email" placeholder="" required="">
                                         <div class="invalid-feedback">
                                             Email is required
                                         </div>
@@ -164,7 +162,7 @@ if (!$rows) {
 
                                     <div class="mb-3">
                                         <label for="formFile" class="form-label">Upload a picture</label>
-                                        <input class="form-control needs-validation" type="file" id="headshot" name="headshot" required>
+                                        <input class="form-control needs-validation" type="file" id="formFile" name="headshot" required>
                                         <div class="invalid-feedback">
                                             Headshot is required
                                         </div>
@@ -172,31 +170,19 @@ if (!$rows) {
 
                                     <div class="mb-3">
                                         <label for="formFile" class="form-label">Upload a picture</label>
-                                        <input class="form-control needs-validation" type="file" id="logo" name="logo" required onclick="upload()">
+                                        <input class="form-control needs-validation" type="file" name="logo" required>
                                         <div class="invalid-feedback">
                                             Logo is required
                                         </div>
                                     </div>
 
-                                    <script>
-                                        function upload() {
-                                            const inputButton = document.getElementById('logo');
-                                            inputButton.addEventListener('click', function(event) {
-                                                event.stopPropagation();
-                                                event.preventDefault();
-                                                const client = filestack.init(AqPGnVYtSQhuKKgDxgr7Az);
-                                                client.picker().open();
-                                            })
-
-                                        }
-                                    </script>
-
 
                                     <div class="col-12">
-                                        <textarea id="instructions" cols="30" rows="5" name="instructions" placeholder="Customize your design. This is optional. We will contact you regardless via email within 24hrs to ask for more details or pictures for optimal satisfaction."></textarea>
+                                        <textarea id="" cols="30" rows="5" name="instructions" placeholder="Customize your design. This is optional. We will contact you regardless via email within 24hrs to ask for more details or pictures for optimal satisfaction."></textarea>
                                     </div>
+
                                 </div>
-                                <button class="w-100 btn btn-primary btn-lg mt-2" type="submit" name="submit">Continue to checkout</button>
+                                <button class="w-100 btn btn-primary btn-lg mt-2" type="submit" name="submit" value="submit">Continue to checkout</button>
                             </form>
                         </div>
                     </div>
@@ -235,7 +221,7 @@ if (!$rows) {
                     </div>
 
                     <div class="col-md-5 offset-md-1 mb-3">
-                        <form method="POST" action="newsletter.php">
+                        <form>
                             <h5 class="text-white">Subscribe to our newsletter</h5>
                             <p class="text-white">Monthly digest of what's new and exciting from us.</p>
                             <div class="d-flex flex-column flex-sm-row w-100 gap-2">
@@ -273,7 +259,6 @@ if (!$rows) {
             </footer>
         </body>
         <!-- JavaScript Bundle with Popper -->
-        <script src="//static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
 
         </html>
 <?php
@@ -282,5 +267,3 @@ if (!$rows) {
 } //while
 $conn->close();
 ?>
-
-https://my.bluehost.com/cgi/cart

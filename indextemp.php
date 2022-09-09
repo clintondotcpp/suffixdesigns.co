@@ -20,7 +20,6 @@
 
 
     <title>Suffix Designs: Illustrations, Logos, Animated stickers, GIFs, Fliers, Websites and commercial designs</title>
-
     <link rel="shortcut icon" type="image/jpg" href="Assets/favicon.jpg">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
@@ -118,14 +117,13 @@
         </div>
     </nav>
 
-    <section id="intro">
+    <section class="intro">
         <div class="px-4 py-5 my-5 text-center">
-            <h1 class="display-1 fw-bold mt-5 pt-5">A design agency with a twist</h1>
-            <h4>Let's help you scale your business</h4>
+            <h6 class="display-6 fw-bold mt-5 pt-5">We create digital art and everything in between</h6>
             <div class="col-lg-6 mx-auto">
                 <p class="lead mb-4">Hi, we're Suffix Designs: A digital design agency. We play within the fields of digital art, animations and websites.</p>
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                    <a href="contact.html" class="btn btn-dark btn-lg active" role="button" aria-pressed="true">Get Started</a>
+                    <a href="contact.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Get free custom stickers</a>
                     <!--<a href="contact.html" class="btn btn-outline-secondary btn-lg px-4" role="button" aria-pressed="true">Custom order</a>-->
                 </div>
             </div>
@@ -135,7 +133,7 @@
     <div class="container mt-5 mb-5">
         <style>
             .shadow {
-                box-shadow: 0 3px 10px rgb(255 255 255 / 0.2);
+                box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
             }
         </style>
         <div class="row g-2">
@@ -236,8 +234,6 @@
     </div>
 
 
-
-
     <section id="categories" class="p-5">
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col">
@@ -245,7 +241,7 @@
                     <img src="img/Template 021.webp" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Illustrations</h5>
-
+                        <p class="card-text">USD 150</p>
                         <a href="illustrations.php" class="btn btn-primary">View catalog</a>
                     </div>
                 </div>
@@ -265,8 +261,8 @@
                         Sorry, your browser doesn't support embedded videos.
                     </video>
                     <div class="card-body">
-                        <h5 class="card-title">Cartoon GIF</h5>
-
+                        <h5 class="card-title">Cartoon GIFs</h5>
+                        <p class="card-text">USD 300</p>
                         <a href="gifs.php" class="btn btn-primary">View catalog</a>
                     </div>
                 </div>
@@ -276,6 +272,7 @@
                     <img src="LOGO/Template 001.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Logos</h5>
+                        <p class="card-text">USD 300</p>
                         <a href="logos.php" class="btn btn-primary">View catalog</a>
                     </div>
                 </div>
@@ -287,6 +284,7 @@
                     <img src="FLIERS/Template 001.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Fliers</h5>
+                        <p class="card-text">USD 100</p>
                         <a href="fliers.php" class="btn btn-primary">View catalog</a>
                     </div>
                 </div>
@@ -296,7 +294,8 @@
                 <div class="card">
                     <img src="LOGOGIF/Template 001.gif" alt="logogif">
                     <div class="card-body">
-                        <h5 class="card-title">Logo GIF</h5>
+                        <h5 class="card-title">Logo GIFs</h5>
+                        <p class="card-text">USD 30</p>
                         <a href="logogif.php" class="btn btn-primary">View catalog</a>
                     </div>
                 </div>
@@ -305,7 +304,8 @@
                 <div class="card">
                     <img src="PHOTOGIF/Template 001.gif" alt="logogif">
                     <div class="card-body">
-                        <h5 class="card-title">Photo GIF</h5>
+                        <h5 class="card-title">Photo GIFs</h5>
+                        <p class="card-text">USD 30</p>
                         <a href="photogif.php" class="btn btn-primary">View catalog</a>
                     </div>
                 </div>
@@ -317,10 +317,99 @@
         <div class="container mt-5 mb-5">
 
             <div class="row g-2">
-                <h2 class="text-center">More Testimonials</h2>
+                <h2 class="text-center">Testimonials</h2>
+                <div class="col-md-4">
+                    <div class="card p-3 text-center px-4">
+
+                        <div class="user-image">
+
+                            <img src="https://suffixdesigns.co/random/marilyn.JPG" class="rounded-circle" width="80">
+
+                        </div>
+
+                        <div class="user-content">
+
+                            <h5 class="mb-0">Marilyn Tarver</h5>
+                            <span>Realtor, RE/MAX</span>
+                            <p>I Love using this in my work, and have received compliments and given referrals!</p>
+
+                        </div>
+
+                        <div class="ratings">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+
+                    </div>
+                </div>
+
                 <div class="col-md-4">
 
-                    <div class="card p-3 text-center px-4 shadow">
+                    <div class="card p-3 text-center px-4">
+
+                        <div class="user-image">
+
+                            <img src="https://suffixdesigns.co/random/amanda.JPG" class="rounded-circle" width="80">
+
+                        </div>
+
+                        <div class="user-content">
+
+                            <h5 class="mb-0">Amanda Sorisho</h5>
+                            <span>RealtyOneGroup</span>
+                            <p>Love this so much! Thank you again🙌. You guys were so quick to get this done(within 7 days). I will definitely send agents your way!</p>
+
+                        </div>
+
+                        <div class="ratings">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="card p-3 text-center px-4">
+
+                        <div class="user-image">
+
+                            <img src="https://suffixdesigns.co/random/perry.jpg" class="rounded-circle" width="80">
+
+                        </div>
+
+                        <div class="user-content">
+
+                            <h5 class="mb-0">Perry Keyasone</h5>
+                            <span>Realtor, Sequoia Real Estate Bay Area.</span>
+                            <p>Amazing work my friend! Thank you for being so easy to work with and adding in my customizations!</p>
+
+                        </div>
+
+                        <div class="ratings">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="card p-3 text-center px-4">
 
                         <div class="user-image">
 
@@ -350,7 +439,7 @@
                 </div>
                 <div class="col-md-4">
 
-                    <div class="card p-3 text-center px-4 shadow">
+                    <div class="card p-3 text-center px-4">
 
                         <div class="user-image">
 
@@ -379,7 +468,7 @@
                 </div>
                 <div class="col-md-4">
 
-                    <div class="card p-3 text-center px-4 shadow">
+                    <div class="card p-3 text-center px-4">
 
                         <div class="user-image">
 
@@ -414,47 +503,6 @@
         </div>
     </section>
 
-    <section id="services">
-        <div class="container">
-            <h1 class="text-center">Services</h1>
-            <table class="table table-bordered w-500">
-                <tr class="table-danger">
-                    <td>
-                        <h3>Illustrations</h3>
-                    </td>
-                    <td>
-                        <h3>Portraits</h3>
-                    </td>
-                    <td>
-                        <h3>Logos</h3>
-                    </td>
-                </tr>
-                <tr class="table-info">
-                    <td>
-                        <h3>Animated Stickers/GIFs</h3>
-                    </td>
-                    <td>
-                        <h3>Social media graphics</h3>
-                    </td>
-                    <td>
-                        <h3>Websites</h3>
-                    </td>
-                </tr>
-                <tr class="table-light">
-                    <td>
-                        <h3>Landing pages</h3>
-                    </td>
-                    <td>
-                        <h3>Email Graphics</h3>
-                    </td>
-                    <td>
-                        <h3>Fliers</h3>
-                    </td>
-                </tr>
-            </table>
-        </div>
-    </section>
-
 
 
     <section id="clients">
@@ -484,108 +532,48 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Accordion Item #1
+                            How do I order?
                         </button>
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            To order an illustration, you just need to upload or send us your headshot and logo.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            What do I need to order?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            To order an illustration, you just need to upload or send us your headshot and logo.
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingTwo">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Accordion Item #2
+                            How long will my order take?
                         </button>
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            Your order will be sent to your email within 10-14 days.
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingThree">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Accordion Item #3
+                            What if I don't like my order?
                         </button>
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Accordion Item #3
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Accordion Item #3
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Accordion Item #3
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Accordion Item #3
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Accordion Item #3
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Accordion Item #3
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            We provide unlimited revisions on all orders. In the event you do not like your art or animation due to a mistake on our part we will refund 50-100% of your money.
                         </div>
                     </div>
                 </div>

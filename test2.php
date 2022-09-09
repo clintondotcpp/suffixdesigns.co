@@ -163,40 +163,23 @@ if (!$rows) {
                                     </div>
 
                                     <div class="mb-3">
-                                        <label for="formFile" class="form-label">Upload a picture</label>
-                                        <input class="form-control needs-validation" type="file" id="headshot" name="headshot" required>
+                                        <label for="formFile" class="form-label">Click the button to upload. You can upload up to 5 images</label>
+                                        <input class="form-control" type="hidden" id="fileupload" name="headshot" required>
+                                        <button id="picker" type="button">Upload images</button>
+                                        <div id="thumbnail-container"></div>
                                         <div class="invalid-feedback">
                                             Headshot is required
                                         </div>
                                     </div>
 
-                                    <div class="mb-3">
-                                        <label for="formFile" class="form-label">Upload a picture</label>
-                                        <input class="form-control needs-validation" type="file" id="logo" name="logo" required onclick="upload()">
-                                        <div class="invalid-feedback">
-                                            Logo is required
-                                        </div>
-                                    </div>
-
-                                    <script>
-                                        function upload() {
-                                            const inputButton = document.getElementById('logo');
-                                            inputButton.addEventListener('click', function(event) {
-                                                event.stopPropagation();
-                                                event.preventDefault();
-                                                const client = filestack.init(AqPGnVYtSQhuKKgDxgr7Az);
-                                                client.picker().open();
-                                            })
-
-                                        }
-                                    </script>
 
 
                                     <div class="col-12">
                                         <textarea id="instructions" cols="30" rows="5" name="instructions" placeholder="Customize your design. This is optional. We will contact you regardless via email within 24hrs to ask for more details or pictures for optimal satisfaction."></textarea>
                                     </div>
                                 </div>
-                                <button class="w-100 btn btn-primary btn-lg mt-2" type="submit" name="submit">Continue to checkout</button>
+
+                                <button class="w-100 btn btn-primary btn-lg mt-2" type="submit" name="submit" value="Submit">Continue to checkout</button>
                             </form>
                         </div>
                     </div>
@@ -274,6 +257,7 @@ if (!$rows) {
         </body>
         <!-- JavaScript Bundle with Popper -->
         <script src="//static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
+        <script src="filetracker.js"></script>
 
         </html>
 <?php

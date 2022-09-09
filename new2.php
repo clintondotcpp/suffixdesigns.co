@@ -154,6 +154,7 @@ if (!$rows) {
                         <div class="col-md-7 col-lg-8 py-5 md-py-2 sm-py-2">
                             <form action="orderupload.php?product=<?php echo $product['stripe_id'] ?>" class="needs-validation" method="post" enctype="multipart/form-data" novalidate>
                                 <div class="row gy-3">
+
                                     <div class="col-12">
                                         <label for="email" class="form-label">Email</label>
                                         <input type="email" class="form-control needs-validation" id="email" placeholder="" name="email" required>
@@ -162,41 +163,11 @@ if (!$rows) {
                                         </div>
                                     </div>
 
-                                    <div class="mb-3">
-                                        <label for="formFile" class="form-label">Upload a picture</label>
-                                        <input class="form-control needs-validation" type="file" id="headshot" name="headshot" required>
-                                        <div class="invalid-feedback">
-                                            Headshot is required
-                                        </div>
-                                    </div>
+                                    <h5>We will contact you via email within 24 hours to get your pictures, logos and customizations.</h5>
 
-                                    <div class="mb-3">
-                                        <label for="formFile" class="form-label">Upload a picture</label>
-                                        <input class="form-control needs-validation" type="file" id="logo" name="logo" required onclick="upload()">
-                                        <div class="invalid-feedback">
-                                            Logo is required
-                                        </div>
-                                    </div>
-
-                                    <script>
-                                        function upload() {
-                                            const inputButton = document.getElementById('logo');
-                                            inputButton.addEventListener('click', function(event) {
-                                                event.stopPropagation();
-                                                event.preventDefault();
-                                                const client = filestack.init(AqPGnVYtSQhuKKgDxgr7Az);
-                                                client.picker().open();
-                                            })
-
-                                        }
-                                    </script>
-
-
-                                    <div class="col-12">
-                                        <textarea id="instructions" cols="30" rows="5" name="instructions" placeholder="Customize your design. This is optional. We will contact you regardless via email within 24hrs to ask for more details or pictures for optimal satisfaction."></textarea>
-                                    </div>
                                 </div>
-                                <button class="w-100 btn btn-primary btn-lg mt-2" type="submit" name="submit">Continue to checkout</button>
+
+                                <button class="w-100 btn btn-primary btn-lg mt-2" type="submit" name="submit" value="Submit">Continue to checkout</button>
                             </form>
                         </div>
                     </div>
@@ -274,6 +245,7 @@ if (!$rows) {
         </body>
         <!-- JavaScript Bundle with Popper -->
         <script src="//static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
+        <script src="filetracker.js"></script>
 
         </html>
 <?php

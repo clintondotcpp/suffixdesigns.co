@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="file" />
+    <div class="controls">
+        <button onclick="upload()">Click me</button>
+    </div>
+    <div>Progress: <span id="progress"></span></div>
+    <script>
+        function upload() {
+            window.addEventListener('DOMContentLoaded', function () {
+                const apikey = 'AqPGnVYtSQhuKKgDxgr7Az';
+                const client = filestack.init(apikey);
+                const options = {
+                    maxFiles: 20,
+                    uploadInBackground: false,
+                    onOpen: () => console.log('opened!'),
+                    onUploadDone: (res) => console.log(res),
+                };
+                client.picker(options).open();
+            });
+
+        }
+    </script>
+    <script src="//static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
+</body>
+
+</html>

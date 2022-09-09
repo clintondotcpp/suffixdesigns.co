@@ -7,7 +7,12 @@ price_1LMwUJGvSc684TudfGwoZdjj,prod_M56hgu8MguNCQo,Illustrations- Template 2,,tx
 price_1LMwTKGvSc684TudygTZetyq,prod_M56gm1Qg6vX42g,Illustrations- Template 1,,txcd_20030000,,2022-07-18 16:07,15000,usd,,,,,per_unit,,inclusive
 
 
-
+cwebp -q 20 "1.png" -o "1.webp"
+cwebp -q 20 "2.png" -o "2.webp"
+cwebp -q 20 "3.png" -o "3.webp"
+cwebp -q 20 "4.png" -o "4.webp"
+cwebp -q 20 "5.png" -o "5.webp"
+cwebp -q 20 "6.png" -o "6.webp"
 
 
 
