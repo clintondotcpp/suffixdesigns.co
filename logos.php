@@ -1,6 +1,6 @@
 <?php
 //connect to database
-$conn = mysqli_connect('localhost', 'roosevi0_Kurinton', '@@90210@@', 'roosevi0_logos');
+$conn = mysqli_connect('localhost', 'Kurinton', '@@90210@@', 'logos');
 
 //check connection
 if (!$conn) {
