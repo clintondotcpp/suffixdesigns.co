@@ -15,7 +15,11 @@ cwebp -q 20 "5.png" -o "5.webp"
 cwebp -q 20 "6.png" -o "6.webp"
 
 
-
+cwebp -q 20 "6.png" -o "6.webp"
+cwebp -q 20 "7.png" -o "7.webp"
+cwebp -q 20 "8.png" -o "8.webp"
+cwebp -q 20 "9.png" -o "9.webp"
+cwebp -q 20 "10.png" -o "10.webp"
 
 
 
