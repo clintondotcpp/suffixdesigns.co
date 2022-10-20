@@ -22,7 +22,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cartoon GIF</title>
         <link rel="shortcut icon" type="image/jpg" href="Assets/favicon.jpg">
-        <!-- CSS only -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
         <!-- JavaScript Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
@@ -113,9 +112,14 @@
             <h1>Your satisfaction guaranteed! And yes, we give FREE stickers!</h1>
             <h4>Over 200 templates to choose from.</h4>
             <p>Illustrations, cartoon logos, animated stickers and GIFs for professionals and businesses</p>
-            <a href="https://suffixdesigns.co/illustrations.php" class="btn btn-success btn-lg active">Shop Templates</a>
+            <a href="https://suffixdesigns.co/illustrations.php" class="btn btn-dark btn-lg active">Shop Templates</a>
         </div>
     </div>
+    <style>
+        .btn-dark {
+            box-shadow: 5px 10px #0a0a0a
+        }
+    </style>
     <section id="offer">
         <div class="container offer">
             <h2>Our Offer!</h2>
@@ -133,23 +137,24 @@
                     </div>-->
 
 
-                    <div class="col-md-12 text-left d-flex justify-content-start">
-                        <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/reach/1.webp" alt="Image Description" width="100" height="100">
-                        <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/reach/3.webp" alt="Image Description" width="100" height="100">
-                        <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/reach/5.webp" alt="Image Description" width="100" height="100">
-
+                    <div class="col-md-12 text-left ">
+                        <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/reach/1.webp" alt="Image Description" width="150" height="150">
+                        <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/reach/2.webp" alt="Image Description" width="150" height="150">
+                        <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/reach/3.webp" alt="Image Description" width="150" height="150">
+                        <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/reach/4.webp" alt="Image Description" width="150" height="150">
+                        <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/reach/5.webp" alt="Image Description" width="150" height="150">
                     </div>
 
                 </li>
 
                 <li>We send you another 5 like the above but no background
-                    <div class="col-md-12 text-left d-flex justify-content-start">
-                        <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/reach/2.webp" alt="Image Description" width="100" height="100">
-                        <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/reach/4.webp" alt="Image Description" width="100" height="100">
-                        <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/reach/6.webp" alt="Image Description" width="100" height="100">
-
+                    <div class="col-md-12 text-left ">
+                        <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/reach/6.webp" alt="Image Description" width="150" height="150">
+                        <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/reach/7.webp" alt="Image Description" width="150" height="150">
+                        <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/reach/8.webp" alt="Image Description" width="150" height="150">
+                        <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/reach/9.webp" alt="Image Description" width="150" height="150">
+                        <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/reach/10.webp" alt="Image Description" width="150" height="150">
                     </div>
-
 
                 </li>
                 <li>100% hand drawn: Our designs are hand drawn by our artists. We do not create computer generated designs.</li>
@@ -187,7 +192,7 @@
         </div>
     </section>
     <div class="container d-flex justify-content-center py-4">
-        <a href="https://suffixdesigns.co/illustrations.php" class="btn btn-success btn-lg active">Shop Templates</a>
+        <a href="https://suffixdesigns.co/illustrations.php" class="btn btn-dark btn-lg active">Shop Templates</a>
     </div>
 
     <section id="container">
@@ -381,7 +386,7 @@
     </section>
 
     <div class="container d-flex justify-content-center py-4">
-        <a href="https://suffixdesigns.co/illustrations.php" class="btn btn-success btn-lg active">Shop Templates</a>
+        <a href="https://suffixdesigns.co/illustrations.php" class="btn btn-dark btn-lg active">Shop Templates</a>
     </div>
 
     <section id="faqs">

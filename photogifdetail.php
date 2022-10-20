@@ -144,12 +144,9 @@ if (!$rows) {
                                 <?php echo $product['product_name']; ?>
                             </h4>
                             <h5>USD <?php echo $product['product_price']; ?></h5>
-                            <video src="<?php echo $product['product_video']; ?>" autoplay loop muted width="300" height="300"></video>
-                            <p>✔ Completely customizable: You can customize the outfit, background, pose, signboard, etc</p>
-                            <p>✔ 5 FREE custom animated stickers</p>
-                            <p>✔ 5 files for Sold, Just Listed, For Sales, etc. This is customizable too.</p>
-                            <p>✔ 5 files for Sold, Just Listed, For Sale, etc with no background for posts and stories. Also customizable</p>
-                            <h5>We will contact you via email within 24 hours to get your pictures, logos and customizations. </h5>
+                            <img src="<?php echo $product['product_video']; ?>" alt="" width="300" height="300">
+                            <p>Turnaround time: 2-3 days.</p>
+                            <h5>We will contact you via email within 24 hours to get your photo, logo and phrases.</h5>
                             <h5>Files will be sent via email or Google Drive once they are ready</h5>
                         </div>
                         <div class="col-md-12 col-lg-12 py-2">

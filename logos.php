@@ -89,7 +89,19 @@ mysqli_close($conn);
   </script>
   <script src="https://kit.fontawesome.com/9c58ab43d1.js" crossorigin="anonymous"></script>
   <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
-  <script src="https://js.stripe.com/v3/"></script>
+  <!-- Google tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155045990-1">
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-155045990-1');
+  </script>
   <!-- Meta Pixel Code -->
   <script>
     ! function(f, b, e, v, n, t, s) {

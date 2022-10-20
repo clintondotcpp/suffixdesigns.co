@@ -146,10 +146,8 @@ if (!$rows) {
                             </h4>
                             <h5>USD <?php echo $product['product_price']; ?></h5>
                             <img src="<?php echo $product['product_img']; ?>" alt="" width="300" height="300">
-                            <p>✔ Completely customizable: You can customize the outfit, background, pose, signboard, etc</p>
-                            <p>✔ 5 FREE custom animated stickers</p>
-                            <p>✔ 5 files for Sold, Just Listed, For Sales, etc. This is customizable too.</p>
-                            <p>✔ 5 files for Sold, Just Listed, For Sale, etc with no background for posts and stories. Also customizable</p>
+                            <p>Completely customizable</p>
+                            <p>Turnaround time: 2-3 days</p>
                             <h5>We will contact you via email within 24 hours to get your pictures, logos and customizations. </h5>
                             <h5>Files will be sent via email or Google Drive once they are ready</h5>
                         </div>
@@ -163,8 +161,6 @@ if (!$rows) {
                                             Email is required
                                         </div>
                                     </div>
-
-
                                 </div>
                                 <button class="w-100 btn btn-primary btn-lg mt-2" type="submit" name="submit">Continue to checkout</button>
                             </form>

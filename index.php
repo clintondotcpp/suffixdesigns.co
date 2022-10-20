@@ -1,11 +1,12 @@
 <style>
-    <?php include "./css/index.scss" ?>
+    <?php include "./css/index.css" ?>
 </style>
 <!--<link rel="stylesheet" href="./css/index.css?v=<?php echo time(); ?>">-->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <title>Suffix Designs: Illustrations, Logos, Animated stickers, GIFs, Fliers, Websites and commercial designs</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,9 +19,6 @@
     <meta property="og:title" content="Suffix Designs: Illustrations, Logos, Animated stickers, GIFs, Fliers, Websites and commercial designs" />
     <meta name="facebook-domain-verification" content="2vu2huvi6q03km94x31reo4azscq5j" />
 
-
-    <title>Suffix Designs: Illustrations, Logos, Animated stickers, GIFs, Fliers, Websites and commercial designs</title>
-
     <link rel="shortcut icon" type="image/jpg" href="Assets/favicon.jpg">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
@@ -28,8 +26,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
     </script>
     <script src="https://kit.fontawesome.com/9c58ab43d1.js" crossorigin="anonymous"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
-    <script src="https://js.stripe.com/v3/"></script>
     <!-- Google tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155045990-1">
     </script>
@@ -120,7 +116,7 @@
 
     <section id="intro">
         <div class="px-4 py-5 my-5 text-center">
-            <h1 class="display-1 fw-bold mt-5 pt-5">A design agency with a swirl</h1>
+            <h1 class="display-1 fw-bold mt-5 pt-5">A design agency with superpowers</h1>
             <h4>Scale your business with high quality designs and animations</h4>
             <div class="col-lg-6 mx-auto">
                 <p class="lead mb-4">Custom Illustrations, GIFs/animations, websites and so much more</p>
@@ -135,70 +131,7 @@
 
 
 
-    <ul class="d-flex flex-row justify-content-center px-5">
-        <li class="px-2">
 
-        </li>
-        <li class="px-5">
-
-        </li>
-        <li class="px-10">
-
-        </li>
-    </ul>
-
-
-
-
-    <!--<div class="col-md-12 text-left d-flex justify-content-start">-->
-    <section class="offer">
-        <div class="container">
-            <h2 class="text-center">What you get when you order an illustration or cartoon GIF</h2>
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col-md-12">
-                    <div class="container p-3">
-                        <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/suffix-designs-gifs/stickers1.gif" alt="Image Description" width="150" height="150">
-                        <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/suffix-designs-gifs/stickers2.gif" alt="Image Description" width="150" height="150">
-                        <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/suffix-designs-gifs/stickers3.gif" alt="Image Description" width="150" height="150">
-                        <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/suffix-designs-gifs/stickers4.gif" alt="Image Description" width="150" height="150">
-                        <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/suffix-designs-gifs/stickers5.gif" alt="Image Description" width="150" height="150">
-                        <h5>5 FREE custom animated GIFs</h5>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-md-12">
-                <div class="container p-3">
-
-                    <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/reach/1.webp" alt="Image Description" width="150" height="150">
-                    <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/reach/2.webp" alt="Image Description" width="150" height="150">
-                    <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/reach/3.webp" alt="Image Description" width="150" height="150">
-                    <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/reach/4.webp" alt="Image Description" width="150" height="150">
-                    <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/reach/5.webp" alt="Image Description" width="150" height="150">
-                    <h5>5 variations of your illustration/cartoon GIF for "Sold", "For Sale", etc</h5>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <div class="container p-3">
-                    <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/reach/6.webp" alt="Image Description" width="150" height="150">
-                    <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/reach/7.webp" alt="Image Description" width="150" height="150">
-                    <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/reach/8.webp" alt="Image Description" width="150" height="150">
-                    <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/reach/9.webp" alt="Image Description" width="150" height="150">
-                    <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/reach/10.webp" alt="Image Description" width="150" height="150">
-                    <h5>5 variations of your illustration/cartoon GIF for "Sold", "For Sale", etc with a transparent background for posts and stories.</h5>
-                </div>
-            </div>
-        </div>
-
-        </div>
-    </section>
-
-    <section>
-        <div class="container text-center my-5 py-2">
-            <h1>100% satisfaction</h1>
-            <p>We will revise your designs until you're 100% satisfied!</p>
-        </div>
-    </section>
 
 
 
@@ -306,10 +239,44 @@
     </div>
 
 
+    <!--<section id="content">
+        <div class="container">
+            <div class="col-md-12 text-left">
+                <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/content/1.webp" alt="Image Description" width="100" height="100">
+                <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/content/2.webp" alt="Image Description" width="100" height="100">
+                <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/content/3.webp" alt="Image Description" width="100" height="100">
+                <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/content/4.webp" alt="Image Description" width="100" height="100">
+                <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/content/5.webp" alt="Image Description" width="100" height="100">
+                <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/content/6.webp" alt="Image Description" width="100" height="100">
+                <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/content/7.webp" alt="Image Description" width="100" height="100">
+                <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/content/8.webp" alt="Image Description" width="100" height="100">
+                <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/content/9.webp" alt="Image Description" width="100" height="100">
+                <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/content/10.webp" alt="Image Description" width="100" height="100">
+                <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/content/11.webp" alt="Image Description" width="100" height="100">
+                <img class="g-width-110 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/content/12.webp" alt="Image Description" width="100" height="100">
+                <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/content/13.webp" alt="Image Description" width="100" height="100">
+                <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/content/14.webp" alt="Image Description" width="100" height="100">
+                <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/content/15.webp" alt="Image Description" width="100" height="100">
+                <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/content/16.webp" alt="Image Description" width="100" height="100">
+                <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/content/17.webp" alt="Image Description" width="100" height="100">
+                <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/content/18.webp" alt="Image Description" width="100" height="100">
+                <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/content/19.webp" alt="Image Description" width="100" height="100">
+                <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/content/20.webp" alt="Image Description" width="100" height="100">
+                <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/content/21.webp" alt="Image Description" width="100" height="100">
+                <img class="g-width-110 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/content/22.webp" alt="Image Description" width="100" height="100">
+                <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/content/23.webp" alt="Image Description" width="100" height="100">
+                <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/content/24.webp" alt="Image Description" width="100" height="100">
+                <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/content/25.webp" alt="Image Description" width="100" height="100">
+                <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/content/26.webp" alt="Image Description" width="100" height="100">
+                <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/content/27.webp" alt="Image Description" width="100" height="100">
+                <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/content/28.webp" alt="Image Description" width="100" height="100">
+                <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/content/29.webp" alt="Image Description" width="100" height="100">
+                <img class="g-width-110 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/content/30.webp" alt="Image Description" width="100" height="100">
 
-
-
-
+            </div>
+        </div>
+    </section>
+-->
 
     <section id="categories" class="p-5">
         <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -344,16 +311,16 @@
                     </div>
                 </div>
             </div>
+
             <div class="col">
                 <div class="card">
-                    <img src="LOGO/Template 001.jpg" class="card-img-top" alt="...">
+                    <img src="https://suffixdesigns.co/LOGO/Template 001.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Logos</h5>
                         <a href="logos.php" class="btn btn-dark">Shop Now</a>
                     </div>
                 </div>
             </div>
-
 
             <div class="col">
                 <div class="card">
@@ -367,7 +334,7 @@
 
             <div class="col">
                 <div class="card">
-                    <img src="LOGOGIF/Template 001.gif" alt="logogif">
+                    <img src="https://suffixdesigns.co/LOGOGIF/Template 001.gif" alt="logogif">
                     <div class="card-body">
                         <h5 class="card-title">Logo GIF</h5>
                         <a href="logogif.php" class="btn btn-dark">Shop Now</a>
@@ -376,7 +343,7 @@
             </div>
             <div class="col">
                 <div class="card">
-                    <img src="PHOTOGIF/Template 001.gif" alt="logogif">
+                    <img src="https://suffixdesigns.co/PHOTOGIF/Template 001.gif" alt="logogif">
                     <div class="card-body">
                         <h5 class="card-title">Photo GIF</h5>
                         <a href="photogif.php" class="btn btn-dark">Shop Now</a>
@@ -385,6 +352,7 @@
             </div>
         </div>
     </section>
+
 
     <section id="stickers">
         <div class="container text-center mb-4">
@@ -403,6 +371,44 @@
                 <img class="g-width-100 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/suffix-designs-gifs/stickers11.gif" alt="Image Description" width="100" height="100">
                 <img class="g-width-110 g-brd-around g-brd-gray-light-v4 g-bg-white g-px-15 g-py-10 g-ma-5 border" src="https://suffixdesigns.co/suffix-designs-gifs/stickers12.gif" alt="Image Description" width="100" height="100">
 
+            </div>
+        </div>
+    </section>
+
+    <section id="content">
+        <div class="container">
+            <div class="row g-2">
+                <div class="col-md-4">
+                    <img src="https://suffixdesigns.co/content/banners/1.jpg" alt="" width="300" height="300">
+                </div>
+                <div class="col-md-4">
+                    <img src="https://suffixdesigns.co/content/banners/2.jpg" alt="" width="300" height="300">
+                </div>
+                <div class="col-md-4">
+                    <img src="https://suffixdesigns.co/content/banners/3.jpg" alt="" width="300" height="300">
+                </div>
+            </div>
+            <div class="row g-2">
+                <div class="col-md-4">
+                    <img src="https://suffixdesigns.co/content/banners/4.jpg" alt="" width="300" height="300">
+                </div>
+                <div class="col-md-4">
+                    <img src="https://suffixdesigns.co/content/banners/5.jpg" alt="" width="300" height="300">
+                </div>
+                <div class="col-md-4">
+                    <img src="https://suffixdesigns.co/content/banners/6.jpg" alt="" width="300" height="300">
+                </div>
+            </div>
+            <div class="row g-2">
+                <div class="col-md-4 ">
+                    <img src="https://suffixdesigns.co/content/banners/7.jpg" alt="" width="300" height="300">
+                </div>
+                <div class="col-md-4">
+                    <img src="https://suffixdesigns.co/content/banners/8.jpg" alt="" width="300" height="300">
+                </div>
+                <div class="col-md-4">
+                    <img src="https://suffixdesigns.co/content/banners/9.jpg" alt="" width="300" height="300">
+                </div>
             </div>
         </div>
     </section>
@@ -533,7 +539,7 @@
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            Average turnaround time is 10-14 days for illustrations and cartoon GIFs.
+                            Average turnaround time is 10-14 days for illustrations, logos and cartoon GIFs. 3-4 days for fliers, logo GIFs and photo GIFs.
                         </div>
                     </div>
                 </div>
@@ -603,90 +609,54 @@
 
     <section id="services">
         <div class="container my-3 py-3">
-            <h1 class="text-center">Services</h1>
-            <table class="table table-bordered w-500">
-                <tr class="table-danger">
-                    <td>
-                        <h3>Illustrations</h3>
-                    </td>
-                    <td>
-                        <h3>Portraits</h3>
-                    </td>
-                    <td>
-                        <h3>Logos</h3>
-                    </td>
-                </tr>
-                <tr class="table-info">
-                    <td>
-                        <h3>Animated Stickers/GIFs</h3>
-                    </td>
-                    <td>
-                        <h3>Social media graphics</h3>
-                    </td>
-                    <td>
-                        <h3>Websites</h3>
-                    </td>
-                </tr>
-                <tr class="table-primary">
-                    <td>
-                        <h3>Landing pages</h3>
-                    </td>
-                    <td>
-                        <h3>Email Graphics</h3>
-                    </td>
-                    <td>
-                        <h3>Fliers</h3>
-                    </td>
-                </tr>
-                <tr class="table-light">
-                    <td>
-                        <h3>Email marketing templates</h3>
-                    </td>
-                    <td>
-                        <h3>Business cards</h3>
-                    </td>
-                    <td>
-                        <h3>Animations</h3>
-                    </td>
-                </tr>
-            </table>
+            <h1 class="text-center">Art, websites, GIFs and so much more.</h1>
+            <ul>
+                <li>Art/Illustrations</li>
+                <li>Animated GIFs</li>
+                <li>Landing pages</li>
+                <li>Websites</li>
+                <li>Portraits</li>
+                <li>Social media graphics: subscription based</li>
+                <li>Fliers</li>
+                <li>Logos</li>
+                <li>Animations</li>
+                <li>Business cards</li>
+            </ul>
         </div>
     </section>
 
+
     <section id="membership-plan">
         <div class="container py-5">
-            <h1 class="text-center">Outsource your content creation designs to us.</h1>
+            <h1 class="text-center">We handle all your content marketing designs</h1>
             <p class="text-center">We take away the pain and stress of creating designs for your business</p>
-            <h4 class="text-center">Subscription Plans</h4>
+            <h2 class="text-center">Subscription Plans</h2>
             <div class="row row-cols-1 row-cols-md-3 g-4">
                 <div class="col text-center">
-                    <h3>Growth</h3>
-                    <div class="pricing-amount">$995</div>
-                    <div class="pricing-info">Pause or cancel anytime</div>
+                    <h6>Growth</h6>
+                    <div class="pricing-amount">$995/month</div>
                     <div class="button py-2"><a href="contact.html" class="btn btn-dark btn-lg active" role="button" aria-pressed="true">Get Started</a></div>
-                    <div class="button py-2"><a href="contact.html" class="btn btn-light btn-lg active" role="button" aria-pressed="true">Book a call</a></div>
+                    <div class="button py-2"><a href="contact.html" class="btn btn-light btn-lg active" role="button" aria-pressed="true">Send an Email</a></div>
                     <p>20 requests</p>
                     <p>Unlimited brands/users</p>
                     <p>Unlimited revisions</p>
                     <p>Pause or cancel at anytime</p>
                 </div>
                 <div class="col text-center">
-                    <h3>Hyper Growth</h3>
-                    <div class="pricing-amount">$1495</div>
-                    <div class="pricing-info">Pause or cancel anytime</div>
+                    <h6>Hyper Growth</h6>
+                    <div class="pricing-amount">$1495/month</div>
                     <div class="button py-2"><a href="contact.html" class="btn btn-dark btn-lg active" role="button" aria-pressed="true">Get Started</a></div>
-                    <div class="button py-2"><a href="contact.html" class="btn btn-light btn-lg active" role="button" aria-pressed="true">Book a call</a></div>
+                    <div class="button py-2"><a href="contact.html" class="btn btn-light btn-lg active" role="button" aria-pressed="true">Send an Email</a></div>
                     <p>30 requests</p>
                     <p>Unlimited brands/users</p>
                     <p>Unlimited revisions</p>
                     <p>Pause or cancel at anytime</p>
                 </div>
                 <div class="col text-center">
-                    <h3>Premium</h3>
-                    <div class="pricing-amount">$2995</div>
-                    <div class="pricing-info">Pause or cancel anytime</div>
+                    <h6>Premium</h6>
+                    <div class="pricing-amount">$2995/month</div>
                     <div class="button py-2"><a href="contact.html" class="btn btn-dark btn-lg active" role="button" aria-pressed="true">Get Started</a></div>
-                    <div class="button py-2"><a href="contact.html" class="btn btn-light btn-lg active" role="button" aria-pressed="true">Book a call</a></div>
+                    <div class="button py-2"><a href="contact.html" class="btn btn-light btn-lg active" role="button" aria-pressed="true">Send an Email</a></div>
                     <p>Unlimited requests</p>
                     <p>Unlimited brands/users</p>
                     <p>Unlimited revisions</p>
@@ -697,238 +667,76 @@
             <h2 class="text-center">Frequently Asked Questions</h2>
             <div class="accordion" id="accordionExample">
                 <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button bg-black text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            How do I order?
-                        </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapsed" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                        <div class="accordion-body bg-black text-white">
-                            You can order on our website by choosing a template and proceeding to check out. You can also order by <a href="mailto:info@suffixdesigns.co">emailing us</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
                     <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button bg-black text-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                             What's the turnarount time?
                         </button>
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            Average turnaround time is 10-14 days for illustrations and cartoon GIFs.
+                        <div class="accordion-body" style="font-style: italic;">
+                            Average turnaround time is 1-2 days.
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button bg-black text-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            What do I need to order?
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            How do I request designs?
                         </button>
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                        <div class="accordion-body bg-black text-white">
-                            We need your headshot and logo to get started.
+                        <div class="accordion-body text-white" style="font-style: italic;">
+                            You can make requests using Trello. You can also make request by emailing or using Google drive or docs.
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button bg-black text-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            What if I don't like my order?
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            How will I receive my designs?
                         </button>
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                        <div class="accordion-body bg-black text-white">
-                            We will make an unlimited number of revisions until you're 100% satisfied.
+                        <div class="accordion-body" style="font-style: italic;">
+                            You will receive your designs via Google drive or by Email.
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button bg-black text-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            What if I have a custom order?
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            What if I don't like my designs?
                         </button>
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                        <div class="accordion-body bg-black text-white">
-                            You can request for a custom design or animation by <a href="mailto:info@suffixdesigns.co">emailing</a>
+                        <div class="accordion-body" style="font-style: italic;">
+                            We will revise your designs until you're 100% satisfied.
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button bg-black text-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Who creates my designs or animations?
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Will I get a refund if I don't like the overall service?
                         </button>
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                        <div class="accordion-body bg-black text-white">
-                            We are an agency comprising of artists, graphic designers, web designers and animators who work together to create high quality designs for our clients and customers
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button bg-black text-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Would I be refunded if I don't like the designs or animations?
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                        <div class="accordion-body bg-black text-white">
-                            Due to the high quality nature of our work and revisions we won't be offering any refunds.
+                        <div class="accordion-body " style="font-style: italic;">
+                            There won't be any refunds as we provide the best quality designs possible.
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <section id="websites">
-        <div class="container py-5">
-            <h2 class="text-center">Get a custom website for your business</h2>
-            <p class="text-center">Scale your business with our high performing websites</p>
-            <h4 class="text-center">Pricing</h4>
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col text-center">
-                    <h3>Ecommerce</h3>
-                    <div class="pricing-amount">$2,995</div>
-                    <div class="button py-2"><a href="contact.html" class="btn btn-dark btn-lg active" role="button" aria-pressed="true">Get Started</a></div>
-                    <div class="button py-2"><a href="contact.html" class="btn btn-light btn-lg active" role="button" aria-pressed="true">Book a call</a></div>
-                    <p>Unlimited revisions</p>
-                </div>
-
-                <div class="col text-center">
-                    <h3>Real Estate</h3>
-                    <div class="pricing-amount">$1,495</div>
-                    <div class="button py-2"><a href="contact.html" class="btn btn-dark btn-lg active" role="button" aria-pressed="true">Get Started</a></div>
-                    <div class="button py-2"><a href="contact.html" class="btn btn-light btn-lg active" role="button" aria-pressed="true">Book a call</a></div>
-                    <p>Unlimited revisions</p>
-                </div>
-
-                <div class="col text-center">
-                    <h4>Portfolio/Agency website</h4>
-                    <div class="pricing-amount">$1,000</div>
-                    <div class="button py-2"><a href="contact.html" class="btn btn-dark btn-lg active" role="button" aria-pressed="true">Get Started</a></div>
-                    <div class="button py-2"><a href="contact.html" class="btn btn-light btn-lg active" role="button" aria-pressed="true">Book a call</a></div>
-                    <p>Unlimited revisions</p>
-                </div>
-
-            </div>
-            <div class="gradient"></div>
-            <h1 class="text-center">We run your website for you so you can focus on the most important things!</h1>
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-                <div class="col text-center">
-                    <h3>Ecommerce + monthly maintenance</h3>
-                    <div class="pricing-amount">$2,995/m</div>
-                    <div class="pricing-info">Pause or cancel anytime</div>
-                    <div class="button py-2"><a href="contact.html" class="btn btn-dark btn-lg active" role="button" aria-pressed="true">Get Started</a></div>
-                    <div class="button py-2"><a href="contact.html" class="btn btn-light btn-lg active" role="button" aria-pressed="true">Book a call</a></div>
-                    <p>$1000 monthly maintenance and store running fee(uploading products, updating prices, tracking orders, etc)</p>
-                    <p>P.S. To be paid once website is completed</p>
-                </div>
-                <div class="col text-center">
-                    <h3>Real Estate + Monthly maintenance</h3>
-                    <div class="pricing-amount">$1,495/m</div>
-                    <div class="pricing-info">Pause or cancel anytime</div>
-                    <div class="button py-2"><a href="contact.html" class="btn btn-dark btn-lg active" role="button" aria-pressed="true">Get Started</a></div>
-                    <div class="button py-2"><a href="contact.html" class="btn btn-light btn-lg active" role="button" aria-pressed="true">Book a call</a></div>
-                    <p></p>
-                    <p>unlimited revisions</p>
-                </div>
-            </div>
-
-            <h2 class="text-center">Frequently Asked Questions</h2>
-            <div class="accordion text-left" id="accordionExample">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            How do I order?
-                        </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapsed" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                        <div class="accordion-body bg-light">
-                            You can order on our website by choosing a template and proceeding to check out. You can also order by <a href="mailto:info@suffixdesigns.co">emailing us</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            What's the turnarount time?
-                        </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                        <div class="accordion-body bg-light">
-                            Average turnaround time is 10-14 days for illustrations and cartoon GIFs.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            What do I need to order?
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                        <div class="accordion-body bg-light">
-                            We need your headshot and logo to get started.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            What if I don't like my order?
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                        <div class="accordion-body bg-light">
-                            We will make an unlimited number of revisions until you're 100% satisfied.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            What if I have a custom order?
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                        <div class="accordion-body bg-light">
-                            You can request for a custom design or animation by <a href="mailto:info@suffixdesigns.co">emailing</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Who creates my designs or animations?
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                        <div class="accordion-body bg-light">
-                            We are an agency comprising of artists, graphic designers, web designers and animators who work together to create high quality designs for our clients and customers
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Would I be refunded if I don't like the designs or animations?
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                        <div class="accordion-body bg-light">
-                            Due to the high quality nature of our work and revisions we won't be offering any refunds.
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="container py-5 text-center">
+            <h1>Website development and maintenance</h1>
+            <p>We build and run your website monthly so you focus on business growth</p>
+            <h3>Starting at $995/month</h3>
+            <div class="button py-2"><a href="mailto:info@suffixdesigns.co" class="btn btn-dark btn-lg active" role="button" aria-pressed="true">Email Us</a></div>
         </div>
     </section>
-
-
 
     <section id="clients">
         <div class="container text-center mb-4 pt-4">
@@ -1125,6 +933,8 @@
         </div>
     </footer>
     <script src="//code.tidio.co/uqdchknnebzppsl6akwqk2xrdwnbtm5i.js" async></script>
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/25754945.js"></script>
+    <!-- End of HubSpot Embed Code -->
 </body>
 
 </html>

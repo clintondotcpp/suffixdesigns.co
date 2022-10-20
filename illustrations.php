@@ -63,18 +63,6 @@ mysqli_close($conn);
 <html lang="en">
 
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J053QB4K19"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'G-J053QB4K19');
-  </script>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,8 +74,19 @@ mysqli_close($conn);
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
   </script>
   <script src="https://kit.fontawesome.com/9c58ab43d1.js" crossorigin="anonymous"></script>
-  <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
-  <script src="https://js.stripe.com/v3/"></script>
+  <!-- Google tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155045990-1">
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-155045990-1');
+  </script>
   <!-- Meta Pixel Code -->
   <script>
     ! function(f, b, e, v, n, t, s) {
@@ -213,11 +212,7 @@ mysqli_close($conn);
     </ul>
   </nav>
 
-  <div class="container">
-    <a href="calendly.php" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" style="right: 20px; position: fixed; z-index: 100; bottom: 20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-inbound-fill" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM15.854.146a.5.5 0 0 1 0 .708L11.707 5H14.5a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 1 0v2.793L15.146.146a.5.5 0 0 1 .708 0z" />
-      </svg></a>
-  </div>
+
 
   <div class="container py-5">
     <h4>Don't see what you like? Make a custom request by Emailing or scheduling a call</h4>
